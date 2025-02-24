@@ -163,7 +163,7 @@ content:
           - 해결책: JWT 를 활용해 Sessionless 인증 도입
 
 # Footer
-footer_show_references: true
+footer_show_references: false
 # references_title: References on request (Override references text)
 
 # Build settings
