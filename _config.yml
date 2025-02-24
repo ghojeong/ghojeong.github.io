@@ -19,28 +19,18 @@ darkmode: never
 about_title: 소개
 about_profile_image: https://avatars.githubusercontent.com/u/38595650
 about_content: | # this will include new lines to allow paragraphs
-  자신있는 기술: Spring, JPA, Spring Security
-
-  6년차 개발자 고정완입니다.
-  
-  백엔드 테크리드로 일하며 다음과 같은 성과를 냈습니다.
-    - IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소
-    - 쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약
-    - 모놀리식에서 MSA로 리팩토링 후 테스트커버리지 86% 달성
-    - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 93% 단축
+  Java, Spring, JPA 기반 6년차 개발자 고정완입니다. <br>
+  200만 다운로드, MAU 16만 B2C 목표관리 서비스인 드림포라의 백엔드 테크리드로 일했습니다. <br>
+  드림포라에서 Feed 커뮤니티와 검색, 현금성 포인트와 상점을 구현했습니다. <br>
+  <mark>우아한테크코스</mark>와 넥스트스텝에서 Java, Kotlin, Spring, JPA 강사로 일하며 크루와 현직자를 교육했습니다.
 
 content:
 
   - title: 학력
     layout: list
     content:
-      - title: 울산과학기술원
-        sub_title: 컴퓨터공학 성적우수 졸업
-        caption: 수리과학 부전공
-        description: |
-          - 알고리즘 A+, 데이터구조 A, 데이터베이스 A-, 운영체제 A-, 네트워크 A-
-          - 선형대수학 A, 미분방정식 A, 집합론 A, 이산수학 A, 위상수학 A, 통계학 A-
-          - [NECSST](https://next.cs.vt.edu/) 연구실에서 Aggregated Data Center 연구에 참여
+      - layout: top-middle
+        sub_title: UNIST 컴퓨터공학 성적우수 졸업 (수리과학 부전공)
 
   - title: 실무경험 (6년차)
     layout: list
@@ -51,47 +41,23 @@ content:
         description: |
           - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
           - 미국, 영국, 인도, 러시아, 이집트 등 전세계 200만명이 사용하는 B2C 목표관리 앱을 개발
-          - [**Dreamfora 경력기술서 링크**](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md)
+          - 주요성과
+            - IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소
+            - 쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약
+            - 모놀리식에서 MSA로 리팩토링 후 테스트 커버리지 86% 달성
+            - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 93% 단축
 
       - title: 웹 개발자
         sub_title: Ecube Labs
         caption: 2018.10.15 - 2020.12.28
         description: |
           - 사용기술: TypeScript, React, Redux, Express.js
-          - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B스마트 시티 SaaS 를 개발
-          - [Ecube Labs 경력기술서 링크](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md)
-
-  - title: 교육경험
-    layout: list
-    content:
-      - title: 세미나 강사
-        sub_title: 한빛미디어
-        caption: 2019.03 - 2019.06
-        description: |
-          - [개발 문서화](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334)를 주제로 한빛미디어의 후원을 받아 공감세미나 주니어를 개최
-          - 작성하는 법을 강의한 개발문서들
-            - 사전정의서
-            - 요구사항 명세서
-            - Entity Relationship Diagram
-            - 프로세스 Flow Chart
-
-      - title: Kotlin 강사
-        sub_title: 우아한테크코스
-        caption: 2024.02 - 2024.06
-        description: |
-          - <mark>우아한테크코스</mark>에서 크루들에게 Kotlin, OOP, TDD 를 교육
-          - 코드리뷰 예시
-            - [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325)
-            - [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
-
-      - title: Spring JPA 강사
-        sub_title: 넥스트스텝
-        caption: 2021.03 - 
-        description: |
-          - 현직자를 교육하며 WAS 와 ORM 프레임워크를 바닐라 언어만으로 구현하도록 지도
-          - 코드리뷰 예시
-            - [쿠키에 NullObjectPattern 도입](https://github.com/next-step/java-http/pull/43#discussion_r1676799820)
-            - [멀티쓰레드에서의 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
+          - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS 를 개발
+          - 주요성과
+            - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 경매(Bidding) 시스템을 구축
+            - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 코드 기반 인증 및 과금 시스템을 구축
+            - 고양시와 협력 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버를 구현
+            - E2E 테스트 환경을 구축하고 테스트 코드를 작성
 
   - title: Dreamfora 경력기술
     layout: list
@@ -161,6 +127,71 @@ content:
           - 원인: 지나치게 누적된 세션으로 인한 메모리 점유
             - Session TTL 설정이 잘못되어, 8천만개의 세션이 휘발되지 않고 쌓임
           - 해결책: JWT 를 활용해 Sessionless 인증 도입
+
+  - title: 보유기술
+    layout: list
+    content:
+      - title: Backend
+        description: |
+          - Java, Kotlin
+          - Spring Boot, Spring Security
+          - JPA, MyBatis, JDBC Template
+          - JUnit5, Mockito, RestAssured, RestDocs
+          - IntelliJ, DataGrip, Vim
+          - Gradle
+
+      - title: DevOps
+        description: |
+          - MySQL, MariaDB, AWS RDS
+          - AWS Code Pipeline, Code Deploy, Code Build
+          - AWS EC2, ELB, ECS, IAM, VPC, Route53
+          - AWS Amplify, Athena, CloudFront, S3
+          - Docker, docker-compose, Firecracker serverless
+
+      - title: Web
+        description: |
+          - JavaScript, TypeScript, JQuery
+          - React, Redux, RxJS, axios, lodash
+          - Jest, Selnium, Storybook, Material UI
+          - NodeJS, Express.js, NGINX
+
+      - title: Mobile
+        description: |
+          - Kotlin, Android
+          - Retrofit, Hilt, Dagger
+          - Room, SQLite
+
+  - title: 교육경험
+    layout: list
+    content:
+      - title: Kotlin 강사
+        sub_title: 우아한테크코스
+        caption: 2024.02 - 2024.06
+        description: |
+          - 우아한테크코스에서 크루들에게 Kotlin, OOP, TDD 를 교육
+          - 코드리뷰 예시
+            - [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325)
+            - [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
+
+      - title: Spring JPA 강사
+        sub_title: 넥스트스텝
+        caption: 2021.03 - 
+        description: |
+          - 현직자를 교육하며 WAS 와 ORM 프레임워크를 바닐라 언어만으로 구현하도록 지도
+          - 코드리뷰 예시
+            - [쿠키에 NullObjectPattern 도입](https://github.com/next-step/java-http/pull/43#discussion_r1676799820)
+            - [멀티쓰레드에서의 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
+
+      - title: 세미나 강사
+        sub_title: 한빛미디어
+        caption: 2019.03 - 2019.06
+        description: |
+          - [개발 문서화](http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S3414110334)를 주제로 한빛미디어의 후원을 받아 공감세미나 주니어를 개최
+          - 작성하는 법을 강의한 개발문서들
+            - 사전정의서
+            - 요구사항 명세서
+            - Entity Relationship Diagram
+            - 프로세스 Flow Chart
 
 # Footer
 footer_show_references: false
