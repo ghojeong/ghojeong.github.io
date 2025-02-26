@@ -19,9 +19,10 @@ darkmode: never
 about_title: 소개
 about_profile_image: https://avatars.githubusercontent.com/u/38595650
 about_content: | # this will include new lines to allow paragraphs
-  Java, Spring, JPA 기반 6년차 개발자 고정완입니다. <br>
-  200만 다운로드, MAU 16만 B2C 목표관리 서비스인 드림포라의 백엔드 테크리드로 일했습니다. <br>
-  드림포라에서 Feed 커뮤니티와 검색, 현금성 포인트와 상점을 구현했습니다. <br>
+  Java, Kotlin, Spring, JPA, MariaDB 기반 6년차 개발자 고정완입니다. <br>
+  200만 다운로드, MAU 16만, 미국 앱스토어 피처드 B2C 목표관리 서비스인 <br>
+  드림포라의 백엔드 테크리드로 일하며 Feed 커뮤니티와 검색, 현금성 포인트와 상점을 구현했습니다. <br>
+  독일의 FAU 연구진에 의해 [Self-Improvement 우수사례로 저널 논문](https://www.jmir.org/2025/1/e65214/)이 등재되었습니다. <br>
   <mark>우아한테크코스</mark>와 넥스트스텝에서 Java, Kotlin, Spring, JPA 강사로 일하며 크루와 현직자를 교육했습니다.
 
 content:
@@ -40,12 +41,12 @@ content:
         caption: 2021.08.25 - 
         description: |
           - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
-          - 미국, 영국, 인도, 러시아, 이집트 등 전세계 200만명이 사용하는 B2C 목표관리 앱을 개발
+          - 미국, 영국, 인도, 러시아, 이집트 등 전세계 200만명이 사용하는 B2C 목표관리 서비스를 개발
           - 주요성과
             - IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소
             - 쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약
-            - 모놀리식에서 MSA로 리팩토링 후 테스트 커버리지 86% 달성
-            - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 93% 단축
+            - 모놀리식에서 MSA로 리팩토링 후 <mark>테스트 커버리지 86%</mark> 달성
+            - 인증서버를 세션기반에서 토큰기반으로 변경 후 <mark>인증시간 93%</mark> 단축
 
       - title: 웹 개발자
         sub_title: Ecube Labs
@@ -54,9 +55,9 @@ content:
           - 사용기술: TypeScript, React, Redux, Express.js
           - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS 를 개발
           - 주요성과
-            - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 경매(Bidding) 시스템을 구축
-            - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 코드 기반 인증 및 과금 시스템을 구축
-            - 고양시와 협력 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버를 구현
+            - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 경매 시스템을 구축
+            - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템을 구축
+            - 한국 고양시와 협력 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버를 구현
             - E2E 테스트 환경을 구축하고 테스트 코드를 작성
 
   - title: Dreamfora 경력기술
@@ -78,10 +79,10 @@ content:
 
       - title: MSA 도입
         sub_title: 테스트 커버리지 86% 달성
-        caption: 서비스마다 인프라를 커스텀
+        caption: ATDD Cycle
         description: |
           - 문제: 신규 기능 추가 시, QA 에서 찾지 못하는 버그가 발생
-          - 원인: 모놀리식 구조라 의도치 않은 Side Effect 가 발생
+          - 원인: 모놀리식 구조로 인해 의도치 않은 Side Effect 가 발생
           - 해결책: 도메인을 기준으로 서비스를 분리
             - 모놀리식 서버를 5개의 도메인을 기준으로 분리 후 테스트 작성
               - 도메인 객체에는 단위 테스트를, 서비스 시나리오에는 인수 테스트를 작성
@@ -133,12 +134,11 @@ content:
     content:
       - title: Backend
         description: |
-          - Java, Kotlin
+          - Java, Kotlin, Gradle
           - Spring Boot, Spring Security
           - JPA, MyBatis, JDBC Template
           - JUnit5, Mockito, RestAssured, RestDocs
           - IntelliJ, DataGrip, Vim
-          - Gradle
 
       - title: DevOps
         description: |
@@ -152,14 +152,8 @@ content:
         description: |
           - JavaScript, TypeScript, JQuery
           - React, Redux, RxJS, axios, lodash
-          - Jest, Selnium, Storybook, Material UI
+          - Jest, Selenium, Storybook, Material UI
           - NodeJS, Express.js, NGINX
-
-      - title: Mobile
-        description: |
-          - Kotlin, Android
-          - Retrofit, Hilt, Dagger
-          - Room, SQLite
 
   - title: 교육경험
     layout: list
