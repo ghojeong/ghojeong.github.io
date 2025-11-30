@@ -19,64 +19,48 @@ darkmode: never
 about_title: 소개
 about_profile_image: https://avatars.githubusercontent.com/u/38595650
 about_content: | # this will include new lines to allow paragraphs
-  Java, Kotlin, Spring, JPA, MariaDB 기반 6년차 개발자 고정완입니다. <br>
-  평균 <mark>TPS가 3만</mark>이 넘는 빗썸의 회원 인증 개발팀에서 백엔드 엔지니어로 재직 중입니다. <br>
-  200만 다운로드, MAU 16만, 미국 앱스토어 피처드 B2C 목표관리 서비스인 <br>
-  드림포라의 백엔드 테크리드로 일하며 커뮤니티와 검색, 현금성 포인트와 상점을 구현했습니다. <br>
-  <mark>우아한테크코스</mark>와 넥스트스텝에서 Java, Kotlin, Spring, JPA 리뷰어로 일하며 크루와 현직자를 교육했습니다.
+  6년 7개월차 백엔드 개발자 고정완입니다. <br>
+  빗썸의 회원 인증 개발팀에서 백엔드 엔지니어로 재직 중입니다. <br>
+  드림포라의 백엔드 테크리드로 일하며 200만 다운로드, MAU 16만을 달성할 때까지 백엔드와 인프라를 책임졌습니다. <br>
+  넥스트스텝과 <mark>우아한테크코스 리뷰어</mark>로 일하며 크루와 현직자를 교육했습니다. <br>
+  UNIST 에서 컴퓨터공학을 성적우수 졸업했습니다.
 
 content:
 
-  - title: 학력
-    layout: list
-    content:
-      - layout: top-middle
-        sub_title: UNIST 컴퓨터공학 성적우수 졸업 (수리과학 부전공)
-
-  - title: 실무경험 (6년 4개월)
+  - title: 실무경험 (6년 7개월)
     layout: list
     content:
       - title: Bithumb
         sub_title: 백엔드 개발자
         caption: 2025.09.01 - 
         description: |
-          - 사용기술: Java, Spring, Oracle, Redis, Kafka
-          - 회원 인증 개발팀에서 고객확인 및 OAuth 시스템 개발
+          - KCB 휴대폰 인증을 활용한 SBS 가요대전 방청권 신청 시스템 개발 (1.8만 RPS)
+          - FIU 자료제출에 대비한 회원 데이터 정합성 검증 배치 개발
+          - 금융감독원 보안 강화 요구에 따른 모든 기기 로그아웃 기능 개발
 
       - title: SumOne
         sub_title: 백엔드 개발자
         caption: 2025.05.12 - 2025.08.14
         description: |
-          - 사용기술: TypeScript, NestJS, GraphQL, PostgreSQL, DynamoDB
-          - DAU 120만명 커플 다이어리 서비스의 구독 결제와 DB의 Hashed Sharding 업무 수행
-          - 주요성과
-            - 핵심 서비스의 1TB 데이터를 PostgreSQL에서 DynamoDB로 서비스 무중단 마이그레이션
-            - PostgreSQL과 DynamoDB에 대한 Dialect를 지원하는 추상화 계층 구현
-            - 월간 및 연간 구독제 기능 구현
+          - DAU 120만 서비스의 Hash Sharding 담당
+          - 1900만 명의 회원 데이터를 PostgreSQL 에서 DynamoDB 로 무중단 마이그레이션
 
       - title: Dreamfora
         sub_title: 백엔드 테크리드
         caption: 2021.08.25 - 2025.03.25
         description: |
-          - 사용기술: Java, Spring Boot, Spring Security, JPA, MariaDB
-          - 미국, 영국, 인도, 러시아, 이집트 등 전세계 200만명이 사용하는 B2C 목표관리 서비스를 개발
-          - 주요성과
-            - IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소
-            - 쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약
-            - 모놀리식에서 MSA로 리팩토링 후 <mark>테스트 커버리지 86%</mark> 달성
-            - 인증서버를 세션기반에서 토큰기반으로 변경 후 <mark>인증시간 93%</mark> 단축
+          - IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소
+          - 쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약
+          - 모놀리식에서 MSA로 리팩토링 후 <mark>테스트 커버리지 86%</mark> 달성
+          - 인증서버를 세션기반에서 토큰기반으로 변경 후 <mark>인증시간 93%</mark> 단축
 
       - title: Ecube Labs
-        sub_title: 웹 개발자
+        sub_title: B2B 스마트시티 솔루션 개발자
         caption: 2018.10.15 - 2020.12.28
         description: |
-          - 사용기술: TypeScript, React, Redux, Express.js
-          - 미국 볼티모어, 일본 이치카와, 한국 고양시와 계약한 B2B 스마트 시티 SaaS 를 개발
-          - 주요성과
-            - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 경매 시스템을 구축
-            - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템을 구축
-            - 한국 고양시와 협력 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버를 구현
-            - E2E 테스트 환경을 구축하고 테스트 코드를 작성
+          - 한국 고양 시와 계근 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버 구현
+          - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템 구축
+          - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 인증 서버 구현 후 E2E 테스트 환경 구축
 
   - title: Dreamfora 경력기술
     layout: list
@@ -152,26 +136,17 @@ content:
     content:
       - title: Backend
         description: |
-          - Java, Kotlin, Gradle
-          - Spring Boot, Spring Security
-          - JPA, MyBatis, JDBC Template
-          - JUnit5, Mockito, RestAssured, RestDocs
-          - IntelliJ, DataGrip, Vim
+          - Java, Kotlin
+          - Spring Boot, Spring Security, Spring Batch
+          - JPA, JDBC Template
+          - JUnit5, RestAssured, RestDocs
+          - MariaDB, Oracle, Redis
 
-      - title: DevOps
+      - title: Infra
         description: |
-          - MySQL, MariaDB, AWS RDS
-          - AWS Code Pipeline, Code Deploy, Code Build
+          - AWS Code Pipeline, Code Deploy, Code Build, Docker
           - AWS EC2, ELB, ECS, IAM, VPC, Route53
-          - AWS Amplify, Athena, CloudFront, S3
-          - Docker, docker-compose, Firecracker serverless
-
-      - title: Web
-        description: |
-          - JavaScript, TypeScript, JQuery
-          - React, Redux, RxJS, axios, lodash
-          - Jest, Selenium, Storybook, Material UI
-          - NodeJS, Express.js, NGINX
+          - Athena, CloudFront, S3
 
   - title: 교육경험
     layout: list
