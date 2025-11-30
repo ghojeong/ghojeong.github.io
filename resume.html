@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고정완 - Java Spring 백엔드 개발자</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500,500italic,400italic,300italic,100italic,700italic">
+    <style>
+        @page {
+            size: A4;
+            margin: 8mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-family: Roboto, sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.3;
+            color: #333;
+            background: #f0f0f0;
+            padding: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            margin: 0;
+            padding: 4mm;
+            break-after: page;
+        }
+
+        .page:last-child {
+            break-after: auto;
+        }
+
+        /* Row & Column */
+        .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Header */
+        .header-container {
+            margin-top: 0px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .header-container .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left {
+            flex: 0 0 50%;
+        }
+
+        .header-left h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.1rem;
+            font-weight: 500;
+        }
+
+        .header-left h2 {
+            font-weight: 300;
+            font-size: 1.8rem;
+            margin-bottom: 0;
+        }
+
+        .header-right {
+            flex: 0 0 50%;
+        }
+
+        .header-right p {
+            font-size: 1.3rem;
+            text-align: right;
+            margin-bottom: 3px;
+            font-weight: 300;
+        }
+
+        .header-right a {
+            color: inherit;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        /* Container */
+        .container {
+            margin-top: 15px;
+        }
+
+        .intro-container {
+            margin-top: 15px;
+        }
+
+        .list-container {
+            margin-top: 15px;
+        }
+
+        /* Section Titles */
+        h3 {
+            font-weight: 300;
+            font-size: 2.5rem;
+            text-align: center;
+            border-top: dashed 2px #CCCCCC;
+            border-bottom: dashed 2px #CCCCCC;
+            padding: 4px 0px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            font-weight: 300;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 0.1rem;
+        }
+
+        /* Intro Section */
+        .intro-container .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .intro-left {
+            flex: 0 0 25%;
+        }
+
+        .intro-right {
+            flex: 0 0 calc(75% - 15px);
+        }
+
+        /* Layout */
+        .layout {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            page-break-inside: avoid;
+            gap: 15px;
+        }
+
+        .layout .details {
+            flex: 0 0 25%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .layout .content {
+            flex: 0 0 calc(75% - 15px);
+        }
+
+        .details p {
+            margin-bottom: 3px;
+            font-size: 1.3rem;
+            text-align: inherit;
+            font-weight: 300;
+        }
+
+        .details p b {
+            font-weight: 500;
+        }
+
+        .details h4 {
+            margin-bottom: 0.1rem;
+            font-weight: 500;
+        }
+
+        .details h4 a {
+            font-weight: 500;
+        }
+
+        /* Content */
+        .content {
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .content p {
+            margin: 0 0 0.6rem;
+            font-size: 1.3rem;
+            text-align: justify;
+        }
+
+        .content ul {
+            font-size: 1.3rem;
+            text-align: justify;
+            margin-left: 18px;
+            margin-bottom: 0.6rem;
+        }
+
+        .content li {
+            margin-bottom: 2px;
+        }
+
+        .content ul ul {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        .content strong {
+            font-weight: 500;
+        }
+
+        /* Mark */
+        mark {
+            padding: 2px 4px;
+            font-size: 90%;
+            color: #fff !important;
+            background-color: #333 !important;
+            border-radius: 3px;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* Links */
+        a {
+            color: #477dca;
+            text-decoration: none;
+            transition: color 150ms ease;
+        }
+
+        a:hover {
+            color: #355e98;
+        }
+
+        .details a {
+            color: inherit;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 8px 0;
+            display: block;
+        }
+
+        /* Profile */
+        .profile-img {
+            height: 160px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Print styles - 인쇄 시 적용 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .page {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+
+            mark {
+                padding: 2px 4px;
+                font-size: 90%;
+                color: #fff !important;
+                background-color: #333 !important;
+                border-radius: 3px;
+                -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+                box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            a[href]:after {
+                content: none !important;
+            }
+
+            img[src]:after {
+                content: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: 소개, 경력, 기술역량 -->
+    <div class="page">
+        <div class="container header-container">
+            <div class="row">
+                <div class="header-left">
+                    <h1>고정완</h1>
+                    <h2>Java Spring 백엔드 개발자</h2>
+                </div>
+                <div class="header-right">
+                    <p>🌐: <a href="https://github.com/ghojeong" target="_blank">https://github.com/ghojeong</a></p>
+                    <p>📮: <a href="mailto:rhwjddhks@gmail.com">rhwjddhks@gmail.com</a></p>
+                    <p>📞: 010-3878-1459</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container intro-container">
+            <div class="row clearfix">
+                <div class="intro-left">
+                    <img class="profile-img" src="images/profile.jpeg" />
+                </div>
+                <div class="intro-right content">
+                    <p>빗썸의 회원인증 개발팀에서 백엔드 엔지니어로 재직 중입니다.<br>
+                    Dreamfora의 백엔드 테크리드로 일하며 200만 다운로드, MAU 16만을 달성했습니다.<br>
+                    NEXTSTEP과 <mark>우아한테크코스 리뷰어</mark>로 일하며 크루와 현직자를 교육했습니다.<br>
+                    UNIST 에서 컴퓨터공학을 성적우수 졸업했습니다.</p>
+
+                    <p>코드 리뷰 예시</p>
+                    <ul>
+                        <li><a href="https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325" target="_blank">람다와 함수형 프로그래밍</a></li>
+                        <li><a href="https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649" target="_blank">테스트와 예외처리</a></li>
+                        <li><a href="https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312" target="_blank">멀티 쓰레드 환경에서의 JPA 영속성 컨텍스트</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container list-container">
+            <h3>경력 (6년 7개월)</h3>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>Bithumb</h4>
+                    <p><b>회원인증팀 백엔드 개발자</b></p>
+                    <p>2025.09.01 -</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>KCB 휴대폰 인증을 활용한 SBS 가요대전 방청권 신청 시스템 개발 (<mark>1.7만 RPS</mark>)</li>
+                        <li>FIU 자료제출에 대비한 회원 데이터 정합성 검증 배치 개발</li>
+                        <li>금융감독원 보안 강화 요구에 따른 모든기기 로그아웃 기능 개발</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>SumOne</h4>
+                    <p><b>백엔드 개발자</b></p>
+                    <p>2025.05.12 - 2025.08.14</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>DAU 120만 서비스의 Hashed Sharding 담당</li>
+                        <li>1900만명의 회원 데이터를 PostgreSQL 에서 DynamoDB 로 무중단 마이그레이션</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>Dreamfora</h4>
+                    <p><b>백엔드 테크리드</b></p>
+                    <p>2021.08.25 - 2025.03.25</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소</li>
+                        <li>쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약</li>
+                        <li>인증서버를 세션기반에서 토큰기반으로 변경 후 <mark>인증시간 93%</mark> 단축</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>Ecube Labs</h4>
+                    <p><b>웹 개발자</b></p>
+                    <p>2018.10.15 - 2020.12.28</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>한국 고양 시와 계근 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버 구현</li>
+                        <li>일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템 구축</li>
+                        <li>미국 볼티모어 시의 폐기물 수거를 위한 로그인 구현 후 E2E 테스트 환경 구축</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container list-container">
+            <h3>기술 역량</h3>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>프레임워크</h4>
+                </div>
+                <div class="content">
+                    <p>Spring Boot, Spring Security, Spring Batch, JPA</p>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>데이터베이스</h4>
+                </div>
+                <div class="content">
+                    <p>Oracle, MariaDB, DynamoDB</p>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>클라우드 & 인프라</h4>
+                </div>
+                <div class="content">
+                    <p><strong>AWS:</strong> EC2, RDS, S3, ALB, VPC, CloudFront, Route53, IAM, DMS<br>
+                    <strong>CI/CD:</strong> Docker, ECS, CodePipeline, Blue-Green, Rolling</p>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>성능 최적화</h4>
+                </div>
+                <div class="content">
+                    <p>쿼리 플랜과 인덱스, DB Cursor<br>
+                    NetFunnel, Rate Limiting, Back Pressure, Redis 캐싱<br></p>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>테스트 & 품질 관리</h4>
+                </div>
+                <div class="content">
+                    <p>JUnit, TDD, ATDD, REST Assured, REST Docs<br>
+                    Dreamfora 실무 개발에서 테스트 <mark>커버리지 86%</mark> 유지</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2+: 포트폴리오, Bithumb 프로젝트 상세 -->
+    <div class="page">
+
+        <div class="container list-container">
+            <h3>포트폴리오 (Spring Security 바닥부터 구현)</h3>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>OAuth2 인증(Authentication)</h4>
+                    <p><b>OAuth2LoginAuthenticationFilter</b></p>
+                    <p>OAuth2 인증 제공자의 응답을 <br> 처리한 후, 사용자 인증을 완료</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://github.com/next-step/spring-security-oauth2/pull/8" target="_blank">PR 링크</a></li>
+                        <li>Google/Github OAuth2 제공자에 대한 인증을 구현</li>
+                        <li>OAuth2AuthorizationRequestRedirectFilter 로 OAuth2 인증 요청을 리다이렉트</li>
+                        <li>ClientRegistrationRepository 로 OAuth2 제공자에 대한 클라이언트 등록 정보를 관리</li>
+                        <li>attemptAuthentication 메서드 구현</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>인가 <br> (Authorization)</h4>
+                    <p><b>AuthorizationManager</b></p>
+                    <p>인가 과정을 추상화하여 <br> 인터페이스 정의</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://github.com/next-step/spring-security-authorization/pull/9" target="_blank">PR 링크</a></li>
+                        <li>4가지 AuthorizationManager 구현</li>
+                        <li>모든 요청 허용 (PermitAllAuthorizationManager)</li>
+                        <li>모든 요청 거부 (DenyAllAuthorizationManager)</li>
+                        <li>인증된 사용자에게만 인가 (AuthenticatedAuthorizationManager)</li>
+                        <li>ADMIN 사용자에게만 인가 (AuthorityAuthorizationManager)</li>
+                        <li><a href="https://github.com/next-step/spring-security-authorization/pull/31" target="_blank">RoleHierarchy 구현</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container list-container">
+            <h3>Bithumb 프로젝트 상세</h3>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>SBS 가요대전 방청권</h4>
+                    <p><b>1.7만 RPS 처리 가능한 시스템 구축</b></p>
+                    <p>KCB, Java, Spring, Aurora, Redis</p>
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    10분간 50만 신청이 예상되는 SBS 방청권 신청 시스템 개발</p>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>KCB 휴대폰 인증을 활용한 비회원 방청권 신청 로직 구현</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>트래픽 분산 전략</strong>
+                            <ul>
+                                <li>Service Gateway에 Request Rate Limit 설정 (1.7만 RPS)</li>
+                                <li>Net Funnel을 통한 단일 진입 포인트 유량 제어</li>
+                            </ul>
+                        </li>
+                        <li><strong>비동기 처리 아키텍처</strong>
+                            <ul>
+                                <li>Kafka 이벤트 발행을 통한 Back Pressure 구현</li>
+                                <li>이벤트 발행은 1.8만 RPS로 처리, DB 쓰기는 1,288 TPS로 관리</li>
+                                <li>KCB 인증 결과 조회와 알림톡 발송을 이벤트 Consumer로 분리</li>
+                            </ul>
+                        </li>
+                        <li><strong>데이터 처리 최적화</strong>
+                            <ul>
+                                <li>Redis 임시 캐싱 후 Write Back 방식으로 DB 부하 감소</li>
+                                <li>알림톡 과부하 방지를 위한 발송 킬스위치 구현</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li><mark>1.7만 RPS</mark>를 처리 가능한 시스템 구축</li>
+                        <li>Kafka를 활용한 비동기 처리로 안정성 확보</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>모든기기 로그아웃</h4>
+                    <p><b>FIU 감사 대비 필수 기능 사전 구축</b></p>
+                    <p>Java, Spring, Oracle, Redis</p>
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    금융감독원의 계정 보안 강화 요구사항에 따른 '모든기기 로그아웃' 기능 개발</p>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>대고객용 모든기기 로그아웃 API 구현</li>
+                        <li>로그아웃 이력을 통합 로깅 체계에 추가</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li>비밀번호 변경 시 자동 로그아웃 트리거 구현</li>
+                        <li>로그아웃 후 캐시 자동 삭제 로직 구현</li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li>통합 로깅 체계로 감사 대응 편의성 향상</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Page 3+: SumOne & Dreamfora 프로젝트 상세 -->
+    <div class="page">
+        <div class="container list-container">
+
+            <div class="layout">
+                <div class="details">
+                    <h4>회원 정합성 검증 배치</h4>
+                    <p><b>일일 배치 소요 시간 90% 개선</b></p>
+                    <p>Java, Spring Batch, Oracle</p>
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    FIU 자료 추출 시 정합성 문제를 방지하기 위한 검증 배치 개발<br>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>회원 데이터의 정합성 검증 배치 설계 및 개발</li>
+                        <li>검증 항목: 단일 주계정 여부, 중복검사(이메일 / 실명번호 / CI)</li>
+                        <li>정합성 검증 전략의 확장을 위해 책임 연쇄 디자인 패턴을 도입</li>
+                        <li>정합성 문제 시 Slack 알림으로 연동</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>성능 최적화</strong>
+                            <ul>
+                                <li>JDBC READ_ONLY 옵션으로 row/table 락 방지</li>
+                                <li>TYPE_FORWARD_ONLY 옵션으로 트랜잭션 영향 제거</li>
+                                <li>페이징이 아닌 커서 기반 처리로 성능 개선</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li>일일 배치 소요 시간 <mark>30분에서 3분 내외로 단축</mark> (90% 개선)</li>
+                        <li>규제 리스크 사전 관리 체계 구축</li>
+                        <li>확장 가능한 체인 구조로 향후 정합성 검증 로직 추가 용이</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>SumOne 프로젝트 상세</h3>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>1900만명 회원 데이터 Hashed Sharding</h4>
+                    <p><b>서비스 무중단 마이그레이션</b></p>
+                    <p>PostgreSQL, DynamoDB, DMS</p>
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    DAU 120만 커플 다이어리 서비스의 회원 데이터를 PostgreSQL에서 DynamoDB로 마이그레이션</p>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>회원 1900만명의 데이터 마이그레이션 전략 수립 및 실행</li>
+                        <li>DynamoDB 특성에 맞는 스키마 재설계 (Partition Key, Sort Key)</li>
+                        <li>커플 단위 Spatial Locality 확보를 위한 키 설계</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>점진적 마이그레이션</strong>
+                            <ul>
+                                <li>1단계: 양쪽 DB 동시 쓰기 (PostgreSQL 읽기, 롤백 대비)</li>
+                                <li>2단계: AWS DMS 기반 Heterogeneous 마이그레이션</li>
+                                <li>3단계: DynamoDB 읽기 전환 (2주간 모니터링 후 PostgreSQL 쓰기 중단)</li>
+                                <li>4단계: PostgreSQL 의 데이터 정리</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li><mark>서비스 무중단</mark> 마이그레이션</li>
+                        <li>롤백 가능한 <mark>점진적</mark> 마이그레이션 전략으로 리스크 최소화</li>
+                        <li>커플 단위 데이터 파티셔닝으로 쿼리 성능 향상</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4+: Dreamfora & EcubeLabs 프로젝트 상세 -->
+    <div class="page">
+
+        <div class="container list-container">
+
+            <h3>Dreamfora 프로젝트 상세</h3>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>인증을 세션 기반에서 JWT 기반으로 변경</h4>
+                    <p><b>인증 속도 93% 개선</b></p>
+                    <p>Java, Spring Security, JWT</p>
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    세션 기반 인증 구조를 JWT 기반 sessionless 형태로 전환하여 인증 성능 개선</p>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>Spring Security를 활용한 JWT 기반 인증 시스템 설계 및 구현</li>
+                        <li>AccessToken (1주일 갱신) / RefreshToken (6개월 유효) 분리 구조 설계</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>세션 성능 문제 분석</strong>
+                            <ul>
+                                <li>세션이 Storage에 저장되어 I/O 병목 발생</li>
+                                <li>8천만 개의 세션이 TTL 없이 누적</li>
+                                <li>인덱스 미설정으로 풀스캔 발생</li>
+                            </ul>
+                        </li>
+                        <li><strong>JWT 아키텍처 설계</strong>
+                            <ul>
+                                <li>Stateless 아키텍처로 서버 부하 감소</li>
+                                <li>Token 갱신 전략으로 보안과 UX 균형</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li>인증 시간 <mark>8초에서 0.5초 이내로 단축</mark> (93% 개선)</li>
+                        <li>서버 확장성 향상 (세션 공유 불필요)</li>
+                        <li>보안 강화 (토큰 기반 인증)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>AWS 로 인프라 전환</h4>
+                    <p><b>장애 빈도 99% 감소</b></p>
+                    <p>EC2, ECS, RDS, S3, ALB, VPC, CloudFront, Route53, IAM</p>
+                    <img src="images/dreamfora/dreamfora_crash.png" width="280px">
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    IDC 호스팅에서 AWS 클라우드로 인프라 전환</p>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>AWS 인프라 아키텍처 설계 (VPC, EC2, RDS, ALB, S3, CloudFront)</li>
+                        <li>보안 강화 (VPC 망분리, Bastion Host)</li>
+                        <li>무중단 배포 파이프라인 구축 (ECS, CodePipeline)</li>
+                        <li>dev/stage/production 환경 분리</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>클라우드 아키텍처</strong>
+                            <ul>
+                                <li>Load Balancer를 통한 WAS 이중화</li>
+                                <li>RDS 백업 설정으로 데이터 안정성 확보</li>
+                                <li>VPC 사설망으로 DB 보안 강화</li>
+                            </ul>
+                        </li>
+                        <li><strong>무중단 배포</strong>
+                            <ul>
+                                <li>dev/stage: NGINX 포트 포워딩 Blue-Green 배포</li>
+                                <li>production: ECS Rolling 배포 (빠른 롤백 대응)</li>
+                            </ul>
+                        </li>
+                        <li><strong>DNS 전환 리스크 관리</strong>
+                            <ul>
+                                <li>Name Server 48시간 TTL 대비 Redirect 프록시 구축</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li>WAS 이중화 후 <mark>장애 빈도 99% 감소</mark></li>
+                        <li>AWS 스타트업 Credit 지원 확보</li>
+                        <li>배포 자동화로 개발 생산성 향상</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>스키마 설계, 쿼리 튜닝</h4>
+                    <p><b>서버 비용 82% 절감</b></p>
+                    <p>Java, Spring, JPA, MariaDB</p>
+                    <img src="images/dreamfora/megazone.png" width="280px">
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    재귀 쿼리와 N+1 문제를 해결하기 위한 DB 스키마 재설계 및 성능 최적화</p>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>재귀 쿼리를 JOIN 쿼리로 변경 가능한 스키마 재설계</li>
+                        <li>SQL Stored Procedure를 테스트 가능한 Java 로직으로 전환</li>
+                        <li>쿼리 플랜 분석 및 인덱스 최적화</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>스키마 재설계</strong>
+                            <ul>
+                                <li>재귀 쿼리의 정지 조건 오류로 인한 서버 성능 저하 문제 분석</li>
+                                <li>JOIN으로 해결 가능한 테이블 구조로 재설계</li>
+                            </ul>
+                        </li>
+                        <li><strong>코드 리팩토링</strong>
+                            <ul>
+                                <li>Stored Procedure → Java 객체 변환</li>
+                                <li>단위 테스트로 로직 검증</li>
+                                <li>쿼리 플랜 분석 후 필요 인덱스 추가</li>
+                            </ul>
+                        </li>
+                        <li><strong>데이터 마이그레이션</strong>
+                            <ul>
+                                <li>Spring Batch 활용</li>
+                                <li>JPA BatchStatement 최적화</li>
+                                <li>Persistable 인터페이스 override 로 N+1 SELECT 제거</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li>서버 비용 월 <mark>1,518달러에서 270달러로 82% 절감</mark></li>
+                        <li>일일 서버 리소스 비용 51.2달러에서 7.3달러로 감소</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container list-container">
+            <h3>EcubeLabs 프로젝트 상세</h3>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>파트너사를 위한 OAuth2.0</h4>
+                    <p><b>인증 서버와 리소스 서버 구축</b></p>
+                    <p>Express.js, MySQL, JWT, apiDoc</p>
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    한국 고양시 쓰레기 매립지의 계근 작업 자동화를 위한 RESTful API 개발.<br>
+                    파트너 하드웨어 업체가 계근 데이터를 서버와 동기화 가능하도록 OAuth2.0 인증 서버와 리소스 서버 구현</p>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>JWT 기반 OAuth2.0 인증/인가 시스템 설계 및 구현</li>
+                        <li>계근 데이터 CRUD API 개발 및 문서화</li>
+                        <li>파트너 하드웨어 업체와의 API 연동 지원</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>토큰 권한 관리</strong>
+                            <ul>
+                                <li>권한별 API 접근 제어를 비트마스크로 구현</li>
+                            </ul>
+                        </li>
+                        <li><strong>API 사용량 모니터링</strong>
+                            <ul>
+                                <li>API 호출 로그를 수집하여 사용량 대시보드 제공</li>
+                                <li>API 사용량에 따른 과금 데이터 제공</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li>오프라인 USB 전달 방식에서 온라인 실시간 데이터 전송으로 전환</li>
+                        <li>정부 시청과의 데이터 공유 주기를 수개월에서 실시간으로 단축</li>
+                        <li>API 문서화로 외부 업체 연동 비용 감소</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>QR 기반 인증 및 과금</h4>
+                    <p><b>이치카와시 공공 쓰레기통 유료화</b></p>
+                    <p>React, TypeScript, Redux</p>
+                    <img src="images/ecubelabs/i-Box.png" width="280px">
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong><br>
+                    일본 이치카와시에 설치된 스마트 공공 쓰레기통 시스템 개발.<br>
+                    쓰레기 배출자를 QR 코드로 인증하고, 배출량에 따라 과금</p>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>웹/앱을 통한 QR 이미지 생성 기능 개발</li>
+                        <li>이치카와시 공무원용 관리자 모니터링 대시보드 개발</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>비동기 처리 최적화</strong>
+                            <ul>
+                                <li>React Hooks를 활용한 상태 관리로 렌더링 최적화</li>
+                                <li>redux-observable과 RxJS를 활용한 복잡한 비동기 플로우 관리</li>
+                            </ul>
+                        </li>
+                        <li><strong>다국어 지원</strong>
+                            <ul>
+                                <li>react-intl을 활용한 일본어/영어 다국어 지원</li>
+                                <li>일본 공무원과의 원활한 커뮤니케이션을 위한 UI/UX 현지화</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li>이치카와시의 쓰레기 배출 추적을 통한 공공 쓰레기통 유료화 시스템 구축</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="details">
+                    <h4>E2E 테스트 환경 구축</h4>
+                    <p><b>웹/모바일 E2E 테스트 환경 구축</b></p>
+                    <p>Selenium, Appium, Jest</p>
+                    <img src="images/ecubelabs/appium-login.gif" width="280px">
+                    <img src="images/ecubelabs/selenium-login.gif" width="280px">
+                </div>
+                <div class="content">
+                    <p><strong>프로젝트 개요</strong></p>
+                    <ul>
+                        <li>웹 및 모바일 앱(React Native)에 대한 E2E 테스트 자동화 환경 구축</li>
+                        <li>Selenium과 Appium을 활용하여 사용자 시나리오 기반 테스트 작성</li>
+                    </ul>
+
+                    <p><strong>주요 업무</strong></p>
+                    <ul>
+                        <li>Selenium을 활용한 웹 E2E 테스트 환경 구축</li>
+                        <li>Appium을 활용한 React Native 모바일 앱 E2E 테스트 환경 구축</li>
+                        <li>사용자 인증 플로우 테스트 자동화</li>
+                        <li>테스트 코드 작성 가이드 문서화</li>
+                    </ul>
+
+                    <p><strong>문제 해결 과정</strong></p>
+                    <ul>
+                        <li><strong>React Native 컴포넌트 접근성 문제</strong>
+                            <ul>
+                                <li>Animated.View로 감싸진 컴포넌트는 XPath를 사용해야 이벤트 전달 가능</li>
+                                <li>accessibilityId 접근 방식이 iOS 환경에서 불안정한 문제 발견</li>
+                                <li>XPath 기반 요소 선택으로 크로스 플랫폼 안정성 확보</li>
+                            </ul>
+                        </li>
+                        <li><strong>테스트 안정성 향상</strong>
+                            <ul>
+                                <li>비동기 렌더링으로 인한 타이밍 이슈 해결 (명시적 대기 조건 추가)</li>
+                                <li>테스트 실패 시 스크린샷 자동 캡처 기능 구현</li>
+                                <li>테스트 환경 격리를 위한 데이터 초기화 스크립트 작성</li>
+                            </ul>
+                        </li>
+                        <li><strong>팀 문화 정착 시도</strong>
+                            <ul>
+                                <li>E2E 테스트 작성 가이드 문서화 및 팀 공유</li>
+                                <li>테스트 자동화의 이점을 개발팀과 QA팀에 전파</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><strong>기여 성과</strong></p>
+                    <ul>
+                        <li>웹/모바일 E2E 테스트 인프라 구축</li>
+                        <li>인증 플로우 자동화 테스트로 회귀 버그 조기 발견 가능</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
