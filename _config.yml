@@ -19,7 +19,7 @@ darkmode: never
 
 # About Section
 about_title: 소개
-about_profile_image: https://avatars.githubusercontent.com/u/38595650
+about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
   빗썸의 회원인증 개발팀에서 백엔드 엔지니어로 재직 중입니다. <br>
   드림포라의 백엔드 테크리드로 일하며 200만 다운로드, MAU 16만을 달성했습니다. <br>
@@ -68,33 +68,6 @@ content:
           - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템 구축
           - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 인증 서버 구현 후 E2E 테스트 환경 구축
 
-  - title: 포트폴리오 (Spring Security 바닥부터 구현)
-    layout: list
-    content:
-      - title: OAuth2 인증(Authentication)
-        sub_title: OAuth2LoginAuthenticationFilter
-        caption: OAuth2 인증 제공자의 응답을 처리한 후, 사용자 인증을 완료
-        description: |
-          - [PR 링크](https://github.com/next-step/spring-security-oauth2/pull/8)
-          - Google/Github 인증을 구현
-          - 인증된 사용자를 Member 어플리케이션 객체로 관리하는 기능을 구현
-          - OAuth2AuthorizationRequestRedirectFilter 로 OAuth2 인증 요청을 리다이렉트
-          - ClientRegistrationRepository 로 OAuth2 Provider(Google/Github)에 대한 클라이언트 등록 정보를 관리
-          - OAuth2UserService 로 Member 어플리케이션 객체를 생성하거나 업데이트
-          - attemptAuthentication 메서드 구현
-
-      - title: 인가(Authorization)
-        sub_title: AuthorizationManager
-        caption: 인가 과정을 AuthorizationManager 로 추상화
-        description: |
-          - [PR 링크](https://github.com/next-step/spring-security-authorization/pull/9)
-          - 4가지 AuthorizationManager 구현
-          - 모든 요청 허용 (PermitAllAuthorizationManager)
-          - 모든 요청 거부 (DenyAllAuthorizationManager)
-          - 인증된 사용자에게만 인가 (AuthenticatedAuthorizationManager)
-          - ADMIN 사용자에게만 인가 (AuthorityAuthorizationManager)
-          - [RoleHierarchy 구현](https://github.com/next-step/spring-security-authorization/pull/31)
-
   - title: 기술 역량
     layout: list
     content:
@@ -122,16 +95,44 @@ content:
           - **테스트:** JUnit, TDD, ATDD, REST Assured, REST Docs
           - **테스트 커버리지:** 실무 개발에서 86% 달성
 
+  - title: 포트폴리오 (Spring Security 바닥부터 구현)
+    layout: list
+    content:
+      - title: OAuth2 인증(Authentication)
+        sub_title: OAuth2LoginAuthenticationFilter
+        caption: OAuth2 인증 제공자의 응답을 처리한 후, 사용자 인증을 완료
+        description: |
+          - [PR 링크](https://github.com/next-step/spring-security-oauth2/pull/8)
+          - Google/Github 인증을 구현
+          - 인증된 사용자를 Member 어플리케이션 객체로 관리하는 기능을 구현
+          - OAuth2AuthorizationRequestRedirectFilter 로 OAuth2 인증 요청을 리다이렉트
+          - ClientRegistrationRepository 로 OAuth2 제공자(Google/Github)에 대한 클라이언트 등록 정보를 관리
+          - OAuth2UserService 로 Member 어플리케이션 객체를 생성하거나 업데이트
+          - attemptAuthentication 메서드 구현
+
+      - title: 인가(Authorization)
+        sub_title: AuthorizationManager
+        caption: 인가 과정을 AuthorizationManager 로 추상화
+        description: |
+          - [PR 링크](https://github.com/next-step/spring-security-authorization/pull/9)
+          - 4가지 AuthorizationManager 구현
+          - 모든 요청 허용 (PermitAllAuthorizationManager)
+          - 모든 요청 거부 (DenyAllAuthorizationManager)
+          - 인증된 사용자에게만 인가 (AuthenticatedAuthorizationManager)
+          - ADMIN 사용자에게만 인가 (AuthorityAuthorizationManager)
+          - [RoleHierarchy 구현](https://github.com/next-step/spring-security-authorization/pull/31)
+
+
   - title: Bithumb 프로젝트 상세
     layout: list
     content:
       - title: SBS 가요대전 방청권 신청
         sub_title: 1.7만 RPS 처리 가능한 시스템 구축
-        caption: 백엔드 단독 개발
+        caption: KCB, Java, Spring, Aurora, Redis
         description: |
           **프로젝트 개요**<br>
           SBS 가요대전을 통한 빗썸 마케팅 이벤트로, <br>
-          10분간 50만 건의 신청이 예상되는 방청권 신청 시스템 개발
+          10분간 50만 신청이 예상되는 방청권 신청 시스템 개발
 
           **주요 업무**
           - KCB 휴대폰 인증을 활용한 비회원 방청권 신청 로직 구현
@@ -155,11 +156,9 @@ content:
           - 거래소 서비스에 영향 없이 안정적인 이벤트 진행
           - Kafka를 활용한 비동기 처리로 시스템 안정성 확보
 
-          **사용 기술:** Java, Spring Boot, Oracle, Redis, Kafka, KCB 휴대폰 인증 API
-
       - title: 회원 정합성 검증 배치
         sub_title: 일일 배치 소요 시간 90% 개선
-        caption: 백엔드 단독 개발
+        caption: Java, Spring Batch, Oracle
         description: |
           **프로젝트 개요**<br>
           FIU, 금감원 자료 추출 시 회원/고객 데이터 정합성 문제를 <br>
@@ -192,7 +191,7 @@ content:
 
       - title: 모든기기 로그아웃
         sub_title: FIU 감사 대비 필수 기능 사전 구축
-        caption: 백엔드 단독 개발
+        caption: Java, Spring, Oracle, Redis
         description: |
           **프로젝트 개요**<br>
           금융감독원의 계정 보안 강화 요구사항에 따른 <br>
@@ -204,23 +203,22 @@ content:
 
           **문제 해결 과정**
           - 비밀번호 변경 시 자동 로그아웃 트리거 구현
-          - 로그아웃 후 필요한 캐시 자동 삭제 로직 구현
+          - 로그아웃 후 캐시 자동 삭제 로직 구현
 
           **기여 성과**
           - FIU 감사 대비 필수 기능 사전 구축
           - 통합 로깅 체계로 감사 대응 편의성 향상
-
-          **사용 기술:** Java, Spring Boot, Oracle, Redis
 
   - title: SumOne 프로젝트 상세
     layout: list
     content:
       - title: 1900만명 회원 데이터 Hashed Sharding
         sub_title: 서비스 무중단 마이그레이션
-        caption: 단독 개발 및 인프라 관리
+        caption: PostgreSQL, DynamoDB, AWS DMS
         description: |
           **프로젝트 개요**<br>
-          DAU 120만 커플 다이어리 서비스의 핵심 회원 데이터를 PostgreSQL에서 DynamoDB로 무중단 마이그레이션<br>
+          DAU 120만 커플 다이어리 서비스의 핵심 회원 데이터를 <br> 
+          PostgreSQL에서 DynamoDB로 무중단 마이그레이션
 
           **주요 업무**
           - 회원 1900만명의 데이터 마이그레이션 전략 수립 및 실행
@@ -233,24 +231,18 @@ content:
              - 2단계: AWS DMS 기반 Heterogeneous 마이그레이션
              - 3단계: DynamoDB 읽기 전환 (2주간 모니터링 후 PostgreSQL 쓰기 중단)
              - 4단계: PostgreSQL 의 데이터 정리
-          - **성능 최적화**
-             - attribute_not_exists 옵션으로 기존 데이터 보호
-             - 87 Mbps 데이터 처리 속도 달성
-             - 병렬 프로그래밍으로 Put 성능 최적화
 
           **기여 성과**
           - **서비스 무중단** 마이그레이션
           - 롤백 가능한 **점진적** 마이그레이션 전략으로 리스크 최소화
           - 커플 단위 데이터 파티셔닝으로 쿼리 성능 향상
 
-          **사용 기술:** PostgreSQL, DynamoDB, AWS DMS
-
   - title: Dreamfora 프로젝트 상세
     layout: list
     content:
       - title: 인증을 세션 기반에서 JWT 기반으로 변경
         sub_title: 인증 속도 93% 개선
-        caption: 백엔드 테크리드
+        caption: Java, Spring Security, JWT
         description: |
           **프로젝트 개요**<br>
           세션 기반 인증 구조를 JWT 기반 sessionless 형태로 전환하여 인증 성능 개선<br>
@@ -273,11 +265,9 @@ content:
           - 서버 확장성 향상 (세션 공유 불필요)
           - 보안 강화 (토큰 기반 인증)
 
-          **사용 기술:** Java, Spring Boot, Spring Security, JWT, MariaDB
-
       - title: AWS 로 인프라 전환
         sub_title: 장애 빈도 99% 감소
-        caption: 백엔드 테크리드 <br><br> <img src="images/dreamfora/dreamfora_crash.png" width="350px" />
+        caption: EC2, ECS, RDS, S3, ALB, VPC, CloudFront, Route53, IAM <br><br> <img src="images/dreamfora/dreamfora_crash.png" width="350px" />
         description: |
           **프로젝트 개요**<br>
           IDC 호스팅에서 AWS 클라우드로 인프라 전환 및 고가용성 아키텍처 구축
@@ -304,11 +294,9 @@ content:
           - AWS 스타트업 Credit 지원 확보
           - 배포 자동화로 개발 생산성 향상
 
-          **사용 기술:** AWS (EC2, RDS, S3, ALB, VPC, CloudFront, Route53, IAM, ECS), Docker, NGINX
-
       - title: 스키마 재설계, 쿼리 튜닝
         sub_title: 서버 비용 82% 절감
-        caption: 백엔드 테크리드
+        caption: Java, Spring, JPA, MariaDB
         description: |
           **프로젝트 개요**<br>
           재귀 쿼리와 N+1 문제를 해결하기 위한 DB 스키마 재설계 및 성능 최적화
@@ -335,14 +323,12 @@ content:
           - 서버 비용 월 **1,518달러에서 270달러로 82% 절감**
           - 일일 서버 리소스 비용 **51.2달러에서 7.3달러로 감소**
 
-          **사용 기술:** Java, Spring Boot, Spring Batch, JPA, MariaDB
-
   - title: EcubeLabs 프로젝트 상세
     layout: list
     content:
       - title: 파트너사를 위한 OAuth2.0
         sub_title: 인증 서버와 리소스 서버 구축
-        caption: 단독 백엔드 개발
+        caption: Express.js, MySQL, JWT, apiDoc
         description: |
           **프로젝트 개요**<br>
           한국 고양시 쓰레기 매립지의 계근 작업 자동화를 위한 RESTful API 개발. <br>
@@ -367,11 +353,9 @@ content:
           - 정부 시청과의 데이터 공유 주기를 수개월에서 실시간으로 단축
           - API 문서화로 외부 업체 연동 비용 감소
 
-          **사용 기술:** Express.js, MySQL, JWT, apiDoc, Pug (SSR), jQuery, SemanticUI
-
       - title: QR 기반 인증 및 과금
         sub_title: 이치카와시 공공 쓰레기통 유료화
-        caption: QR 생성 및 인증 개발 <br><br> <img src="images/ecubelabs/i-Box.png" width="350px" />
+        caption: React, TypeScript, Redux, GraphQL <br><br> <img src="images/ecubelabs/i-Box.png" width="350px" />
         description: |
           **프로젝트 개요**<br>
           일본 이치카와시에 설치된 스마트 공공 쓰레기통(i-Box) 시스템 개발. <br>
@@ -394,11 +378,9 @@ content:
           **기여 성과**
           - 이치카와시의 쓰레기 배출 추적을 통한 공공 쓰레기통 유료화 시스템 구축
 
-          **사용 기술:** React, TypeScript, Redux, redux-observable, RxJS, Apollo GraphQL, lodash, react-intl<br><br>
-
       - title: E2E 테스트 환경 구축
         sub_title: 웹/모바일 E2E 테스트 환경 구축
-        caption: 테스트 환경을 개발팀과 QA팀에 전파 <br><br> <img src="images/ecubelabs/appium-login.gif" width="350px" /> <br><br> <img src="images/ecubelabs/selenium-login.gif" width="350px" />
+        caption: Selenium, Appium, TypeScript, Jest <br><br> <img src="images/ecubelabs/appium-login.gif" width="350px" /> <br><br> <img src="images/ecubelabs/selenium-login.gif" width="350px" />
         description: |
           **프로젝트 개요**
           - 웹 및 모바일 앱(React Native)에 대한 E2E 테스트 자동화 환경 구축
@@ -426,8 +408,6 @@ content:
           **기여 성과**
           - 웹/모바일 E2E 테스트 인프라 구축
           - 인증 플로우 자동화 테스트로 회귀 버그 조기 발견 가능
-
-          **사용 기술:** Selenium, Appium, TypeScript, Jest, wd(Web Driver), React Native
 
 # Footer
 footer_show_references: false
