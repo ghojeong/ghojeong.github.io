@@ -278,7 +278,7 @@ content:
 
       - title: AWS 로 인프라 전환
         sub_title: 장애 빈도 99% 감소
-        caption: 백엔드 테크리드 <br><br> <img src="images/dreamfora/dreamfora_crash.png" width="300px" />
+        caption: 백엔드 테크리드 <br><br> <img src="images/dreamfora/dreamfora_crash.png" width="350px" />
         description: |
           **프로젝트 개요:**<br>
           IDC 호스팅에서 AWS 클라우드로 인프라 전환 및 고가용성 아키텍처 구축<br>
@@ -307,7 +307,7 @@ content:
 
           **사용 기술:** AWS (EC2, RDS, S3, ALB, VPC, CloudFront, Route53, IAM, ECS), Docker, NGINX
 
-      - title: 스키마 재설계 및 쿼리 튜닝
+      - title: 스키마 재설계, 쿼리 튜닝
         sub_title: 서버 비용 82% 절감
         caption: 백엔드 테크리드
         description: |
@@ -372,7 +372,7 @@ content:
 
       - title: QR 기반 인증 및 과금
         sub_title: 이치카와시 공공 쓰레기통 유료화
-        caption: QR 생성 및 인증 개발 <br><br> <img src="images/ecubelabs/i-Box.png" width="300px" />
+        caption: QR 생성 및 인증 개발 <br><br> <img src="images/ecubelabs/i-Box.png" width="350px" />
         description: |
           **프로젝트 개요:**<br>
           일본 이치카와시에 설치된 스마트 공공 쓰레기통(i-Box) 시스템 개발. <br>
@@ -399,7 +399,7 @@ content:
 
       - title: E2E 테스트 환경 구축
         sub_title: 웹/모바일 E2E 테스트 환경 구축
-        caption: 테스트 환경을 개발팀과 QA팀에 전파 <br><br> <img src="images/ecubelabs/appium-login.gif" width="300px" /> <br><br> <img src="images/ecubelabs/selenium-login.gif" width="300px" />
+        caption: 테스트 환경을 개발팀과 QA팀에 전파 <br><br> <img src="images/ecubelabs/appium-login.gif" width="350px" /> <br><br> <img src="images/ecubelabs/selenium-login.gif" width="350px" />
         description: |
           **프로젝트 개요:**
           - 웹 및 모바일 앱(React Native)에 대한 E2E 테스트 자동화 환경 구축
