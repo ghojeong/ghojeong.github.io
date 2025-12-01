@@ -7,8 +7,8 @@ version: 2
 # Personal info
 name: 고정완
 title: Java Spring 백엔드 개발자
-website: https://github.com/ghojeong
-website_title: 🌐
+website: https://velog.io/@pyro
+website_title: 📝
 email: rhwjddhks@gmail.com
 email_title: 📮
 phone: 010-3878-1459
@@ -22,7 +22,7 @@ about_title: 소개
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
   빗썸의 회원인증 개발팀에서 백엔드 엔지니어로 재직 중입니다. <br>
-  드림포라의 백엔드 테크리드로 일하며 200만 다운로드, MAU 16만을 달성했습니다. <br>
+  Dreamfora의 백엔드 테크리드로 일하며 200만 다운로드, MAU 16만을 달성했습니다. <br>
   NEXTSTEP과 <mark>우아한테크코스 리뷰어</mark>로 일하며 크루와 현직자를 교육했습니다. <br>
   UNIST 에서 컴퓨터공학을 성적우수 졸업했습니다. <br>
 
@@ -40,7 +40,7 @@ content:
         sub_title: 회원인증팀 백엔드 개발자
         caption: 2025.09.01 -
         description: |
-          - KCB 휴대폰 인증을 활용한 SBS 가요대전 방청권 신청 시스템 개발 (1.7만 RPS)
+          - KCB 휴대폰 인증을 활용한 SBS 가요대전 방청권 신청 시스템 개발 (<mark>1.7만 RPS</mark>)
           - FIU 자료제출에 대비한 회원 데이터 정합성 검증 배치 개발
           - 금융감독원 보안 강화 요구에 따른 모든 기기 로그아웃 기능 개발
 
@@ -92,8 +92,8 @@ content:
 
       - title: 테스트 & 품질 관리
         description: |
-          - **테스트:** JUnit, TDD, ATDD, REST Assured, REST Docs
-          - **테스트 커버리지:** 실무 개발에서 86% 달성
+          - JUnit, TDD, ATDD, REST Assured, REST Docs
+          - Dreamfora 실무 개발에서 테스트 <mark>커버리지 86%</mark> 유지
 
   - title: 포트폴리오 (Spring Security 바닥부터 구현)
     layout: list
@@ -150,7 +150,7 @@ content:
              - 알림톡 과부하 방지를 위한 발송 킬스위치 구현
 
           **기여 성과**
-          - **1.7만 RPS** 처리 가능한 시스템 구축
+          - <mark>1.7만 RPS</mark> 처리 가능한 시스템 구축
           - 거래소 서비스에 영향 없이 안정적인 이벤트 진행
           - Kafka를 활용한 비동기 처리로 시스템 안정성 확보
 
