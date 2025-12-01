@@ -254,8 +254,7 @@
         /* Images */
         img {
             max-width: 100%;
-            height: auto;
-            margin: 8px 0;
+            margin-top: 4px;
             display: block;
         }
 
@@ -336,7 +335,7 @@
                     NEXTSTEP과 <mark>우아한테크코스 리뷰어</mark>로 일하며 크루와 현직자를 교육했습니다.<br>
                     UNIST 에서 컴퓨터공학을 성적우수 졸업했습니다.</p>
 
-                    <p>코드 리뷰 역량</p>
+                    <p>코드 리뷰 역량을 보여주는 링크들</p>
                     <ul>
                         <li><a href="https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325" target="_blank">람다와 함수형 프로그래밍</a></li>
                         <li><a href="https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649" target="_blank">테스트와 예외처리</a></li>
@@ -372,7 +371,7 @@
                 </div>
                 <div class="content">
                     <ul>
-                        <li>DAU 120만 서비스의 Hashed Sharding 담당</li>
+                        <li>DAU 120만 서비스의 Hashed 파티셔닝 담당</li>
                         <li>1900만명의 회원 데이터를 PostgreSQL 에서 DynamoDB 로 무중단 마이그레이션</li>
                     </ul>
                 </div>
@@ -401,7 +400,7 @@
                 </div>
                 <div class="content">
                     <ul>
-                        <li>한국 고양 시와 계근 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버 구현</li>
+                        <li>한국 고양 시와 계근 하드웨어 업체를 위해 OAuth2 인증 서버와 리소스 서버 구현</li>
                         <li>일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템 구축</li>
                         <li>미국 볼티모어 시의 폐기물 수거를 위한 로그인 구현 후 E2E 테스트 환경 구축</li>
                     </ul>
@@ -472,22 +471,21 @@
                 <div class="details">
                     <h4>OAuth2 인증(Authentication)</h4>
                     <p><b>OAuth2LoginAuthenticationFilter</b></p>
-                    <p>OAuth2 인증 제공자의 응답을 <br> 처리한 후, 사용자 인증을 완료</p>
+                    <p>인증 제공자로 리다이렉트 후, <br> 사용자 인증을 시도</p>
                 </div>
                 <div class="content">
                     <ul>
                         <li><a href="https://github.com/next-step/spring-security-oauth2/pull/8" target="_blank">PR 링크</a></li>
-                        <li>Google/Github OAuth2 제공자에 대한 인증을 구현</li>
+                        <li>Google/GitHub OAuth2 제공자에 대한 인증을 구현</li>
                         <li>OAuth2AuthorizationRequestRedirectFilter 로 OAuth2 인증 요청을 리다이렉트</li>
-                        <li>ClientRegistrationRepository 로 OAuth2 제공자에 대한 클라이언트 등록 정보를 관리</li>
-                        <li>attemptAuthentication 메서드 구현</li>
+                        <li>OAuth2LoginAuthenticationFilter 의 attemptAuthentication 메서드 구현</li>
                     </ul>
                 </div>
             </div>
 
             <div class="layout">
                 <div class="details">
-                    <h4>인가 <br> (Authorization)</h4>
+                    <h4>인가 (Authorization)</h4>
                     <p><b>AuthorizationManager</b></p>
                     <p>인가 과정을 추상화하여 <br> 인터페이스 정의</p>
                 </div>
@@ -495,10 +493,12 @@
                     <ul>
                         <li><a href="https://github.com/next-step/spring-security-authorization/pull/9" target="_blank">PR 링크</a></li>
                         <li>4가지 AuthorizationManager 구현</li>
-                        <li>모든 요청 허용 (PermitAllAuthorizationManager)</li>
-                        <li>모든 요청 거부 (DenyAllAuthorizationManager)</li>
-                        <li>인증된 사용자에게만 인가 (AuthenticatedAuthorizationManager)</li>
-                        <li>ADMIN 사용자에게만 인가 (AuthorityAuthorizationManager)</li>
+                        <ul>
+                            <li>모든 요청 허용 (PermitAllAuthorizationManager)</li>
+                            <li>모든 요청 거부 (DenyAllAuthorizationManager)</li>
+                            <li>인증된 사용자에게만 인가 (AuthenticatedAuthorizationManager)</li>
+                            <li>ADMIN 사용자에게만 인가 (AuthorityAuthorizationManager)</li>
+                        </ul>
                         <li><a href="https://github.com/next-step/spring-security-authorization/pull/31" target="_blank">RoleHierarchy 구현</a></li>
                     </ul>
                 </div>
@@ -513,7 +513,8 @@
                     <h4>SBS 가요대전 방청권</h4>
                     <p><b>1.7만 RPS 처리 가능한 시스템 구축</b></p>
                     <p>KCB, Java, Spring, Aurora, Redis</p>
-                    <img src="images/bit/stress_test.jpeg" width="280px">
+                    <img src="images/bit/rps.png">
+                    <img src="images/bit/response_time.png">
                 </div>
                 <div class="content">
                     <p><strong>프로젝트 개요</strong><br>
@@ -633,9 +634,10 @@
 
             <div class="layout">
                 <div class="details">
-                    <h4>1900만명 회원 데이터 Hashed Sharding</h4>
+                    <h4>1900만명 회원 데이터 Hashed 파티셔닝</h4>
                     <p><b>서비스 무중단 마이그레이션</b></p>
                     <p>PostgreSQL, DynamoDB, DMS</p>
+                    <img src="images/sumone/migration.png">
                 </div>
                 <div class="content">
                     <p><strong>프로젝트 개요</strong><br>
@@ -650,20 +652,20 @@
 
                     <p><strong>문제 해결 과정</strong></p>
                     <ul>
-                        <li><strong>점진적 마이그레이션</strong>
-                            <ul>
-                                <li>1단계: 양쪽 DB 동시 쓰기 (PostgreSQL 읽기, 롤백 대비)</li>
-                                <li>2단계: AWS DMS 기반 Heterogeneous 마이그레이션</li>
-                                <li>3단계: DynamoDB 읽기 전환 (2주간 모니터링 후 PostgreSQL 쓰기 중단)</li>
-                                <li>4단계: PostgreSQL 의 데이터 정리</li>
-                            </ul>
-                        </li>
+                        <li>1단계: 양쪽 DB 동시 쓰기 (PostgreSQL 읽기, 롤백 대비)</li>
+                        <li>2단계: AWS DMS 기반 Heterogeneous 마이그레이션</li>
+                        <ul>
+                            <li>DynamoDB Put 의 attribute_not_exists 옵션 활용</li>
+                            <li>1단계의 최신 데이터가 오래된 데이터로 덮어씌워지 않도록 방지</li>
+                        </ul>
+                        <li>3단계: DynamoDB 읽기 전환 (2주간 모니터링 후 PostgreSQL 쓰기 중단)</li>
+                        <li>4단계: PostgreSQL 의 데이터 정리</li>
                     </ul>
 
                     <p><strong>기여 성과</strong></p>
                     <ul>
                         <li><mark>서비스 무중단</mark> 마이그레이션</li>
-                        <li>롤백 가능한 <mark>점진적</mark> 마이그레이션 전략으로 리스크 최소화</li>
+                        <li>롤백 가능한 <mark>점진적 마이그레이션</mark> 전략으로 리스크 최소화</li>
                         <li>커플 단위 데이터 파티셔닝으로 쿼리 성능 향상</li>
                     </ul>
                 </div>
@@ -725,7 +727,7 @@
                     <h4>AWS 로 인프라 전환</h4>
                     <p><b>장애 빈도 99% 감소</b></p>
                     <p>EC2, ECS, RDS, S3, ALB, VPC, CloudFront, Route53, IAM</p>
-                    <img src="images/dreamfora/dreamfora_crash.png" width="280px">
+                    <img src="images/dreamfora/dreamfora_crash.png">
                 </div>
                 <div class="content">
                     <p><strong>프로젝트 개요</strong><br>
@@ -775,7 +777,7 @@
                     <h4>스키마 설계, 쿼리 튜닝</h4>
                     <p><b>서버 비용 82% 절감</b></p>
                     <p>Java, Spring, JPA, MariaDB</p>
-                    <img src="images/dreamfora/megazone.png" width="280px">
+                    <img src="images/dreamfora/megazone.png">
                 </div>
                 <div class="content">
                     <p><strong>프로젝트 개요</strong><br>
@@ -826,18 +828,18 @@
 
             <div class="layout">
                 <div class="details">
-                    <h4>파트너사를 위한 OAuth2.0</h4>
+                    <h4>파트너사를 위한 OAuth2</h4>
                     <p><b>인증 서버와 리소스 서버 구축</b></p>
                     <p>Express.js, MySQL, JWT, apiDoc</p>
                 </div>
                 <div class="content">
                     <p><strong>프로젝트 개요</strong><br>
                     한국 고양시 쓰레기 매립지의 계근 작업 자동화를 위한 RESTful API 개발.<br>
-                    파트너 하드웨어 업체가 계근 데이터를 서버와 동기화하도록 OAuth2.0 인증 서버와 리소스 서버 구현</p>
+                    파트너 하드웨어 업체가 계근 데이터를 서버와 동기화하도록 OAuth2 인증 서버와 리소스 서버 구현</p>
 
                     <p><strong>주요 업무</strong></p>
                     <ul>
-                        <li>JWT 기반 OAuth2.0 인증/인가 시스템 설계 및 구현</li>
+                        <li>JWT 기반 OAuth2 인증/인가 시스템 설계 및 구현</li>
                         <li>계근 데이터 CRUD API 개발 및 문서화</li>
                         <li>파트너 하드웨어 업체와의 API 연동 지원</li>
                     </ul>
@@ -871,7 +873,7 @@
                     <h4>QR 기반 인증 및 과금</h4>
                     <p><b>이치카와시 공공 쓰레기통 유료화</b></p>
                     <p>React, TypeScript, Redux</p>
-                    <img src="images/ecubelabs/i-Box.png" width="280px">
+                    <img src="images/ecubelabs/i-Box.png">
                 </div>
                 <div class="content">
                     <p><strong>프로젝트 개요</strong><br>

@@ -26,7 +26,7 @@ about_content: | # this will include new lines to allow paragraphs
   NEXTSTEP과 <mark>우아한테크코스 리뷰어</mark>로 일하며 크루와 현직자를 교육했습니다. <br>
   UNIST 에서 컴퓨터공학을 성적우수 졸업했습니다. <br>
 
-  코드 리뷰 예시
+  코드 리뷰 역량을 보여주는 링크들
   - [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325)
   - [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
   - [멀티 쓰레드 환경에서의 JPA 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
@@ -48,7 +48,7 @@ content:
         sub_title: 백엔드 개발자
         caption: 2025.05.12 - 2025.08.14
         description: |
-          - DAU 120만 서비스의 Hashed Sharding 담당
+          - DAU 120만 서비스의 Hashed 파티셔닝 담당
           - 1900만명의 회원 데이터를 PostgreSQL 에서 DynamoDB 로 무중단 마이그레이션
 
       - title: Dreamfora
@@ -64,7 +64,7 @@ content:
         sub_title: 웹 개발자
         caption: 2018.10.15 - 2020.12.28
         description: |
-          - 한국 고양 시와 계근 하드웨어 업체를 위해 OAuth2.0 인증 서버와 리소스 서버 구현
+          - 한국 고양 시와 계근 하드웨어 업체를 위해 OAuth2 인증 서버와 리소스 서버 구현
           - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템 구축
           - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 인증 서버 구현 후 E2E 테스트 환경 구축
 
@@ -100,26 +100,24 @@ content:
     content:
       - title: OAuth2 인증(Authentication)
         sub_title: OAuth2LoginAuthenticationFilter
-        caption: OAuth2 인증 제공자의 응답을 처리한 후, 사용자 인증을 완료
+        caption: 인증 제공자로 리다이렉트 후, 사용자 인증을 시도
         description: |
           - [PR 링크](https://github.com/next-step/spring-security-oauth2/pull/8)
           - Google/Github 인증을 구현
           - 인증된 사용자를 Member 어플리케이션 객체로 관리하는 기능을 구현
           - OAuth2AuthorizationRequestRedirectFilter 로 OAuth2 인증 요청을 리다이렉트
-          - ClientRegistrationRepository 로 OAuth2 제공자(Google/Github)에 대한 클라이언트 등록 정보를 관리
-          - OAuth2UserService 로 Member 어플리케이션 객체를 생성하거나 업데이트
-          - attemptAuthentication 메서드 구현
+          - OAuth2LoginAuthenticationFilter 의 attemptAuthentication 메서드 구현
 
       - title: 인가(Authorization)
         sub_title: AuthorizationManager
-        caption: 인가 과정을 AuthorizationManager 로 추상화
+        caption: 인가 과정을 추상화하여 인터페이스 정의
         description: |
           - [PR 링크](https://github.com/next-step/spring-security-authorization/pull/9)
           - 4가지 AuthorizationManager 구현
-          - 모든 요청 허용 (PermitAllAuthorizationManager)
-          - 모든 요청 거부 (DenyAllAuthorizationManager)
-          - 인증된 사용자에게만 인가 (AuthenticatedAuthorizationManager)
-          - ADMIN 사용자에게만 인가 (AuthorityAuthorizationManager)
+            - 모든 요청 허용 (PermitAllAuthorizationManager)
+            - 모든 요청 거부 (DenyAllAuthorizationManager)
+            - 인증된 사용자에게만 인가 (AuthenticatedAuthorizationManager)
+            - ADMIN 사용자에게만 인가 (AuthorityAuthorizationManager)
           - [RoleHierarchy 구현](https://github.com/next-step/spring-security-authorization/pull/31)
 
 
@@ -128,7 +126,7 @@ content:
     content:
       - title: SBS 가요대전 방청권 신청
         sub_title: 1.7만 RPS 처리 가능한 시스템 구축
-        caption: KCB, Java, Spring, Aurora, Redis <br><br> <img src="images/bit/stress_test.jpeg" width="350px" />
+        caption: KCB, Java, Spring, Aurora, Redis <br><br> <img src="images/bit/rps.png" width="350px" /> <br> <img src="images/bit/response_time.png" width="350px" />
         description: |
           **프로젝트 개요**<br>
           SBS 가요대전을 통한 빗썸 마케팅 이벤트로, <br>
@@ -212,9 +210,9 @@ content:
   - title: SumOne 프로젝트 상세
     layout: list
     content:
-      - title: 1900만명 회원 데이터 Hashed Sharding
+      - title: 1900만명 회원 데이터 Hashed 파티셔닝
         sub_title: 서비스 무중단 마이그레이션
-        caption: PostgreSQL, DynamoDB, AWS DMS
+        caption: PostgreSQL, DynamoDB, AWS DMS <br><br> <img src="images/sumone/migration.png" width="350px" />
         description: |
           **프로젝트 개요**<br>
           DAU 120만 커플 다이어리 서비스의 핵심 회원 데이터를 <br> 
@@ -229,6 +227,8 @@ content:
           - **점진적 마이그레이션**
              - 1단계: 양쪽 DB 동시 쓰기 (PostgreSQL 읽기, 롤백 대비)
              - 2단계: AWS DMS 기반 Heterogeneous 마이그레이션
+              - DynamoDB Put 의 attribute_not_exists 옵션 활용
+              - 1단계의 최신 데이터가 오래된 데이터로 덮어씌워지 않도록 방지
              - 3단계: DynamoDB 읽기 전환 (2주간 모니터링 후 PostgreSQL 쓰기 중단)
              - 4단계: PostgreSQL 의 데이터 정리
 
@@ -326,17 +326,17 @@ content:
   - title: EcubeLabs 프로젝트 상세
     layout: list
     content:
-      - title: 파트너사를 위한 OAuth2.0
+      - title: 파트너사를 위한 OAuth2
         sub_title: 인증 서버와 리소스 서버 구축
         caption: Express.js, MySQL, JWT, apiDoc
         description: |
           **프로젝트 개요**<br>
           한국 고양시 쓰레기 매립지의 계근 작업 자동화를 위한 RESTful API 개발. <br>
           파트너 하드웨어 업체가 계근 데이터를 서버와 동기화 가능하도록 <br>
-          OAuth2.0 인증 서버와 리소스 서버 구현<br>
+          OAuth2 인증 서버와 리소스 서버 구현<br>
 
           **주요 업무**
-          - JWT 기반 OAuth2.0 인증/인가 시스템 설계 및 구현
+          - JWT 기반 OAuth2 인증/인가 시스템 설계 및 구현
           - 계근 데이터 CRUD API 개발 및 문서화 (apiDoc)
           - 외부 하드웨어 업체와의 API 연동 지원
           - API 사용량 기반 과금 시스템 대시보드 개발
