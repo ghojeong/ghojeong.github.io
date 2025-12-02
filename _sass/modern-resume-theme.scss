@@ -27,10 +27,16 @@
   }
 }
 
+
 .profile-img {
-  height: 160px;
+  width: 140px;
+  height: 180px;
   margin: 0 auto;
+  margin-bottom: 20px;
   display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat, no-repeat;
 }
 
 .list-container {
