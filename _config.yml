@@ -58,7 +58,7 @@ content:
           - IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소
           - 쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약
           - 모놀리식에서 MSA로 리팩토링 후 <mark>테스트 커버리지 86%</mark> 달성
-          - 인증서버를 세션기반에서 토큰기반으로 변경 후 <mark>인증시간 93%</mark> 단축
+          - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 8초에서 0.1초로 단축
 
       - title: Ecube Labs
         sub_title: 웹 개발자
@@ -241,7 +241,7 @@ content:
     layout: list
     content:
       - title: 인증을 세션 기반에서 JWT 기반으로 변경
-        sub_title: 인증 속도 93% 개선
+        sub_title: 인증시간 8초에서 0.1초로 단축
         caption: Java, Spring Security, JWT
         description: |
           **프로젝트 개요**<br>
@@ -261,7 +261,7 @@ content:
              - Token 갱신 전략으로 보안과 UX 균형
 
           **기여 성과**
-          - 인증 시간 **8초에서 0.5초 이내로 단축** (93% 개선)
+          - 인증시간 8초에서 0.1초로 단축
           - 서버 확장성 향상 (세션 공유 불필요)
           - 보안 강화 (토큰 기반 인증)
 
