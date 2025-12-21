@@ -6,7 +6,7 @@ version: 2
 
 # Personal info
 name: 고정완
-title: Java Spring 백엔드 개발자
+title: Backend Engineer
 website: https://velog.io/@pyro
 website_title: 📝
 email: rhwjddhks@gmail.com
@@ -21,19 +21,20 @@ darkmode: never
 about_title: 소개
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  빗썸의 회원인증 개발팀에서 백엔드 엔지니어로 재직 중입니다. <br>
-  Dreamfora의 백엔드 테크리드로 일하며 200만 다운로드, MAU 16만을 달성했습니다. <br>
-  NEXTSTEP과 <mark>우아한테크코스 리뷰어</mark>로 일하며 크루와 현직자를 교육했습니다. <br>
-  UNIST 에서 컴퓨터공학을 성적우수 졸업했습니다. <br>
+  맡은 제품에 강한 책임감을 가지고 파고드는 개발자 고정완입니다. <br>
+  4년간 드림포라의 테크리드로 서비스를 바닥부터 만들며 200만 사용자, MAU 16만을 달성했습니다. <br>
+  4년간 ATDD Cycle을 실천했습니다. 커버리지 보다는 <strong>요구사항을 정확히 검증하는 테스트</strong>를 추구합니다. <br>
 
-  코드 리뷰 역량을 보여주는 링크들
-  - [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325)
-  - [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
-  - [멀티 쓰레드 환경에서의 JPA 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
+  5년간 끊임없이 개발 스터디를 했으며, 동작원리를 깊게 파고드는 공부를 좋아합니다. <br>
+  스터디 활동을 인정받아 NEXTSTEP과 우아한테크코스에서 전문 리뷰어 활동을 했습니다. <br>
+  바닐라 언어만으로 <strong>프레임워크를 바닥부터 만드는</strong> 스터디에 자주 참여합니다.
+
+  UNIST 에서 컴퓨터공학과 수리과학을 융합전공하여 성적우수 졸업했습니다. <br>
+  문제를 풀기 전에, 문제 요구사항을 수학적으로 정의하는 훈련을 받았습니다.
 
 content:
 
-  - title: 경력 (6년 7개월)
+  - title: 실무 경력
     layout: list
     content:
       - title: Bithumb
@@ -42,14 +43,13 @@ content:
         description: |
           - KCB 휴대폰 인증을 활용한 SBS 가요대전 방청권 신청 시스템 개발 (<mark>1.7만 RPS</mark>)
           - FIU 자료제출에 대비한 회원 데이터 정합성 검증 배치 개발
-          - 금융감독원 보안 강화 요구에 따른 모든 기기 로그아웃 기능 개발
 
       - title: SumOne
-        sub_title: 백엔드 개발자
+        sub_title: 계약직 백엔드 개발자
         caption: 2025.05.12 - 2025.08.14
         description: |
-          - DAU 120만 서비스의 Hashed 파티셔닝 담당
           - 1900만명의 회원 데이터를 PostgreSQL 에서 DynamoDB 로 무중단 마이그레이션
+          - Prisma 인터페이스와 호환되도록 DynamoDB 쿼리빌더와 DAO 구현
 
       - title: Dreamfora
         sub_title: 백엔드 테크리드
@@ -57,8 +57,7 @@ content:
         description: |
           - IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소
           - 쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약
-          - 모놀리식에서 MSA로 리팩토링 후 <mark>테스트 커버리지 86%</mark> 달성
-          - 인증서버를 세션기반에서 토큰기반으로 변경 후 인증시간 8초에서 0.1초로 단축
+          - [**Dreamfora 경력기술서 링크**](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md)
 
       - title: Ecube Labs
         sub_title: 웹 개발자
@@ -66,7 +65,7 @@ content:
         description: |
           - 한국 고양 시와 계근 하드웨어 업체를 위해 OAuth2 인증 서버와 리소스 서버 구현
           - 일본 이치카와 시의 유료 공공 쓰레기통을 위한 QR 기반 인증 및 과금 시스템 구축
-          - 미국 볼티모어 시의 폐기물 수거 업무 낙찰을 위한 인증 서버 구현 후 E2E 테스트 환경 구축
+          - [Ecube Labs 경력기술서 링크](https://github.com/ghojeong/resume/blob/main/ecubelabs/README.md)
 
   - title: 기술 역량
     layout: list
@@ -95,32 +94,6 @@ content:
           - JUnit, TDD, ATDD, REST Assured, REST Docs
           - Dreamfora 실무 개발에서 테스트 <mark>커버리지 86%</mark> 유지
 
-  - title: 포트폴리오 (Spring Security 바닥부터 구현)
-    layout: list
-    content:
-      - title: OAuth2 인증(Authentication)
-        sub_title: OAuth2LoginAuthenticationFilter
-        caption: 인증 제공자로 리다이렉트 후, 사용자 인증을 시도
-        description: |
-          - [PR 링크](https://github.com/next-step/spring-security-oauth2/pull/8)
-          - Google/Github 인증을 구현
-          - 인증된 사용자를 Member 어플리케이션 객체로 관리하는 기능을 구현
-          - OAuth2AuthorizationRequestRedirectFilter 로 OAuth2 인증 요청을 리다이렉트
-          - OAuth2LoginAuthenticationFilter 의 attemptAuthentication 메서드 구현
-
-      - title: 인가(Authorization)
-        sub_title: AuthorizationManager
-        caption: 인가 과정을 추상화하여 인터페이스 정의
-        description: |
-          - [PR 링크](https://github.com/next-step/spring-security-authorization/pull/9)
-          - 4가지 AuthorizationManager 구현
-            - 모든 요청 허용 (PermitAllAuthorizationManager)
-            - 모든 요청 거부 (DenyAllAuthorizationManager)
-            - 인증된 사용자에게만 인가 (AuthenticatedAuthorizationManager)
-            - ADMIN 사용자에게만 인가 (AuthorityAuthorizationManager)
-          - [RoleHierarchy 구현](https://github.com/next-step/spring-security-authorization/pull/31)
-
-
   - title: Bithumb 프로젝트 상세
     layout: list
     content:
@@ -129,108 +102,57 @@ content:
         caption: KCB, Java, Spring, Aurora, Redis <br><br> <img src="images/bit/rps.png" width="350px" /> <br> <img src="images/bit/response_time.png" width="350px" />
         description: |
           **프로젝트 개요**<br>
-          SBS 가요대전을 통한 빗썸 마케팅 이벤트로, <br>
-          10분간 50만 신청이 예상되는 방청권 신청 시스템 개발
+          10분 동안 50만 신청이 예상되는 SBS 방청권 신청 시스템 개발
+
+          **팀 구성 및 역할**<br>
+          - 단독으로 BE 로직 개발, 테이블 및 아키텍처 설계 담당
+          - DevOps 팀에서 인프라 검수 / 데이터 팀에서 모델 검수
 
           **주요 업무**
           - KCB 휴대폰 인증을 활용한 비회원 방청권 신청 로직 구현
-          - 거래소 서비스에 영향을 주지 않는 고가용성 아키텍처 설계 및 구현
-          - 10분 간 50만명의 신청을 버티는 대규모 트래픽 처리를 위한 성능 최적화
 
           **문제 해결 과정**
-          - **트래픽 분산 전략**
-             - Service Gateway에 Request Rate Limit 설정 (1.7만 RPS)
+          - **트래픽 제어 전략**
              - Net Funnel을 통한 단일 진입 포인트 유량 제어
+             - Service Gateway에 Request Rate Limit 설정 (1.7만 RPS)
           - **비동기 처리 아키텍처**
              - Kafka 이벤트 발행을 통한 Back Pressure 구현
-             - 이벤트 발행 1.8만 RPS 처리, DB 쓰기는 1,288 TPS로 관리
-             - KCB 인증 결과 조회와 알림톡 발송을 이벤트 Consumer로 분리
-          - **데이터 처리 최적화**
+             - 이벤트 발행은 1.8만 RPS로 처리, DB 쓰기는 1,288 TPS로 관리
+             - KCB 인증 결과 저장과 알림톡 발송에 대한 Consumer 를 분리
+             - 알림톡 과부하 방지를 위한 발송 킬 스위치 구현
+          - **데이터 처리**
              - Redis 임시 캐싱 후 Write Back 방식으로 DB 부하 감소
-             - 알림톡 과부하 방지를 위한 발송 킬스위치 구현
+             - 중복 검사와 같은 모든 조회 로직은 Redis 캐시 활용
 
           **기여 성과**
-          - <mark>1.7만 RPS</mark> 처리 가능한 시스템 구축
-          - 거래소 서비스에 영향 없이 안정적인 이벤트 진행
-          - Kafka를 활용한 비동기 처리로 시스템 안정성 확보
-
-      - title: 회원 정합성 검증 배치
-        sub_title: 일일 배치 소요 시간 90% 개선
-        caption: Java, Spring Batch, Oracle
-        description: |
-          **프로젝트 개요**<br>
-          FIU, 금감원 자료 추출 시 회원/고객 데이터 정합성 문제를 <br>
-          사전에 방지하기 위한 일일 배치 시스템 개발
-
-          **주요 업무**
-          - 회원 데이터의 정합성 검증 배치 설계 및 개발
-          - 정합성 검증 항목
-            - 회원 이메일 중복
-            - 고객 실명번호 중복
-            - 고객의 회원계정 부재
-            - 주계정 중복
-            - 고객 CI 중복
-          - 정합성 검증 전략의 확장을 위해 책임 연쇄 디자인 패턴을 도입
-          - 정합성 문제 시 Slack 알림으로 연동
-
-          **문제 해결 과정**
-          - **성능 최적화**
-             - JDBC READ_ONLY 옵션으로 row/table 락 방지
-             - TYPE_FORWARD_ONLY 옵션으로 트랜잭션 영향 제거
-             - 페이지 기반이 아닌 커서 기반 처리로 메모리 효율화
-          - **실서비스 영향 최소화**
-             - 읽기 전용 트랜잭션으로 서비스 락 방지
-             - 대규모 데이터 처리 시에도 DB 성능 낭비 방지
-
-          **기여 성과**
-          - 일일 배치 소요 시간 **30분에서 3분 내외로 단축** (90% 개선)
-          - 규제 리스크 사전 관리 체계 구축
-          - 확장 가능한 체인 구조로 향후 정합성 검증 로직 추가 용이
-
-      - title: 모든기기 로그아웃
-        sub_title: FIU 감사 대비 필수 기능 사전 구축
-        caption: Java, Spring, Oracle, Redis
-        description: |
-          **프로젝트 개요**<br>
-          금융감독원의 계정 보안 강화 요구사항에 따른 <br>
-          '모든기기 로그아웃' 기능 개발 및 이력 관리<br>
-
-          **주요 업무**
-          - 대고객용 모든 기기 로그아웃 API 구현
-          - 로그아웃 이력을 통합 로깅 체계에 추가
-
-          **문제 해결 과정**
-          - 비밀번호 변경 시 자동 로그아웃 트리거 구현
-          - 로그아웃 후 캐시 자동 삭제 로직 구현
-
-          **기여 성과**
-          - FIU 감사 대비 필수 기능 사전 구축
-          - 통합 로깅 체계로 감사 대응 편의성 향상
+          - <mark>1.7만 RPS</mark>를 처리 가능한 시스템 구축
+          - 생애최초 신규회원 2만명 모객
 
   - title: SumOne 프로젝트 상세
     layout: list
     content:
-      - title: 1900만명 회원 데이터 Hashed 파티셔닝
+      - title: 1900만명 회원 데이터
         sub_title: 서비스 무중단 마이그레이션
         caption: PostgreSQL, DynamoDB, AWS DMS <br><br> <img src="images/sumone/migration.png" width="350px" />
         description: |
           **프로젝트 개요**<br>
-          DAU 120만 커플 다이어리 서비스의 핵심 회원 데이터를 <br> 
-          PostgreSQL에서 DynamoDB로 무중단 마이그레이션
+          커플 다이어리 서비스의 전체 회원 데이터를 PostgreSQL에서 DynamoDB로 마이그레이션
+
+          **팀 구성 및 역할**<br>
+          - 단독으로 마이그레이션 구현 및 설계 담당
 
           **주요 업무**
           - 회원 1900만명의 데이터 마이그레이션 전략 수립 및 실행
-          - DynamoDB 특성에 맞는 스키마 재설계 (Partition Key, Sort Key)
-          - 커플 단위 Spatial Locality 확보를 위한 키 설계
+          - Prisma 인터페이스에 호환되도록 DynamoDB 쿼리빌더와 DAO 구현
+          - 커플 단위 Spatial Locality 를 위해 Partition Key, Sort Key 설계
 
           **문제 해결 과정**
-          - **점진적 마이그레이션**
-             - 1단계: 양쪽 DB 동시 쓰기 (PostgreSQL 읽기, 롤백 대비)
-             - 2단계: AWS DMS 기반 Heterogeneous 마이그레이션
-              - DynamoDB Put 의 attribute_not_exists 옵션 활용
-              - 1단계의 최신 데이터가 오래된 데이터로 덮어씌워지 않도록 방지
-             - 3단계: DynamoDB 읽기 전환 (2주간 모니터링 후 PostgreSQL 쓰기 중단)
-             - 4단계: PostgreSQL 의 데이터 정리
+          - 1단계: 양쪽 DB 동시 쓰기 (PostgreSQL 읽기, 롤백 대비)
+          - 2단계: AWS DMS 기반 Heterogeneous 마이그레이션
+             - DynamoDB Put 의 attribute_not_exists 옵션 활용
+             - 1단계의 최신 데이터가 오래된 데이터로 덮어씌워지 않도록 방지
+          - 3단계: DynamoDB 읽기 전환 (2주간 모니터링 후 PostgreSQL 쓰기 중단)
+          - 4단계: PostgreSQL 의 데이터 정리
 
           **기여 성과**
           - **서비스 무중단** 마이그레이션
@@ -245,11 +167,15 @@ content:
         caption: Java, Spring Security, JWT
         description: |
           **프로젝트 개요**<br>
-          세션 기반 인증 구조를 JWT 기반 sessionless 형태로 전환하여 인증 성능 개선<br>
+          세션 기반 인증 구조를 JWT 기반 sessionless 형태로 전환하여 인증 성능 개선
+
+          **팀 구성 및 역할**<br>
+          - 4명의 팀으로 개선된 인증 방식을 구현 (백엔드 2명, 모바일 2명)
+          - 단독으로 문제 분석 후, 팀 전체에게 인증 아키텍처 개선을 설득
 
           **주요 업무**
           - Spring Security를 활용한 JWT 기반 인증 시스템 설계 및 구현
-          - AccessToken (1주일 갱신) / RefreshToken (6개월 유효) 분리 구조 설계<br>
+          - AccessToken (1주일 갱신) / RefreshToken (6개월 유효) 분리 구조 설계
 
           **문제 해결 과정**
           - **세션 성능 문제 분석**
@@ -270,7 +196,11 @@ content:
         caption: EC2, ECS, RDS, S3, ALB, VPC, CloudFront, Route53, IAM <br><br> <img src="images/dreamfora/dreamfora_crash.png" width="350px" />
         description: |
           **프로젝트 개요**<br>
-          IDC 호스팅에서 AWS 클라우드로 인프라 전환 및 고가용성 아키텍처 구축
+          IDC 호스팅에서 AWS 클라우드로 인프라 전환
+
+          **팀 구성 및 역할**<br>
+          - 단독으로 메가존 클라우드의 컨설팅을 받으며 수행
+          - 인프라 전환 후 백엔드 팀에게 클라우드 교육 담당
 
           **주요 업무**
           - AWS 인프라 아키텍처 설계 (VPC, EC2, RDS, ALB, S3, CloudFront)
@@ -279,7 +209,7 @@ content:
           - dev/stage/production 환경 분리
 
           **문제 해결 과정**
-          - **고가용성 아키텍처**
+          - **클라우드 아키텍처**
              - Load Balancer를 통한 WAS 이중화
              - RDS 백업 설정으로 데이터 안정성 확보
              - VPC 사설망으로 DB 보안 강화
@@ -301,6 +231,11 @@ content:
           **프로젝트 개요**<br>
           재귀 쿼리와 N+1 문제를 해결하기 위한 DB 스키마 재설계 및 성능 최적화
 
+          **팀 구성 및 역할**<br>
+          - 2명의 백엔드 팀으로 진행
+          - 스키마 재설계와, 데이터 마이그레이션 담당
+          - 사내 스터디와 코드리뷰를 통해 리팩토링을 위한 컨벤션 정의
+
           **주요 업무**
           - 재귀 쿼리를 JOIN 쿼리로 변경 가능한 스키마 재설계
           - SQL Stored Procedure를 테스트 가능한 Java 로직으로 전환
@@ -317,7 +252,7 @@ content:
           - **데이터 마이그레이션**
              - Spring Batch 활용
              - JPA BatchStatement 최적화
-             - Persistable 인터페이스로 N+1 SELECT 제거
+             - Persistable 인터페이스 override 로 N+1 SELECT 제거
 
           **기여 성과**
           - 서버 비용 월 **1,518달러에서 270달러로 82% 절감**
@@ -331,22 +266,24 @@ content:
         caption: Express.js, MySQL, JWT, apiDoc
         description: |
           **프로젝트 개요**<br>
-          한국 고양시 쓰레기 매립지의 계근 작업 자동화를 위한 RESTful API 개발. <br>
-          파트너 하드웨어 업체가 계근 데이터를 서버와 동기화 가능하도록 <br>
-          OAuth2 인증 서버와 리소스 서버 구현<br>
+          한국 고양시 쓰레기 매립지의 계근 작업 자동화를 위한 RESTful API 개발.<br>
+          파트너 하드웨어 업체가 계근 데이터를 서버와 동기화하도록 OAuth2 인증 서버와 리소스 서버 구현
+
+          **팀 구성 및 역할**<br>
+          - 3명의 팀으로 진행 (백엔드 2명, DevOps 1명)
+          - 인증 및 리소스 API 구현 및 문서화 담당
 
           **주요 업무**
           - JWT 기반 OAuth2 인증/인가 시스템 설계 및 구현
-          - 계근 데이터 CRUD API 개발 및 문서화 (apiDoc)
-          - 외부 하드웨어 업체와의 API 연동 지원
-          - API 사용량 기반 과금 시스템 대시보드 개발
+          - 계근 데이터 CRUD API 개발 및 문서화
+          - 파트너 하드웨어 업체와의 API 연동 지원 및 외부 교육
 
           **문제 해결 과정**
           - **토큰 권한 관리**
              - 권한별 API 접근 제어를 비트마스크로 구현
           - **API 사용량 모니터링**
              - API 호출 로그를 수집하여 사용량 대시보드 제공
-             - 외부 업체별 API 사용량에 따른 과금 데이터 제공
+             - API 사용량에 따른 과금 데이터 제공
 
           **기여 성과**
           - 오프라인 USB 전달 방식에서 온라인 실시간 데이터 전송으로 전환
@@ -358,8 +295,12 @@ content:
         caption: React, TypeScript, Redux, GraphQL <br><br> <img src="images/ecubelabs/i-Box.png" width="350px" />
         description: |
           **프로젝트 개요**<br>
-          일본 이치카와시에 설치된 스마트 공공 쓰레기통(i-Box) 시스템 개발. <br>
+          일본 이치카와시에 설치된 스마트 공공 쓰레기통 시스템 개발. <br>
           쓰레기 배출자를 QR 코드로 인증하고, 배출량에 따라 과금
+
+          **팀 구성 및 역할**<br>
+          - 4명의 팀으로 진행 (웹 개발자 2명, IoT 엔지니어 2명)
+          - QR 기반 인증의 웹 로직 담당
 
           **주요 업무**
           - 웹/앱을 통한 QR 이미지 생성 기능 개발
@@ -372,8 +313,7 @@ content:
              - React Hooks를 활용한 상태 관리로 렌더링 최적화
              - redux-observable과 RxJS를 활용한 복잡한 비동기 플로우 관리
           - **다국어 지원**
-             - react-intl을 활용한 일본어/영어 다국어 지원
-             - 일본 공무원과의 원활한 커뮤니케이션을 위한 UI/UX 현지화
+             - react-intl을 활용한 일본어 지원
 
           **기여 성과**
           - 이치카와시의 쓰레기 배출 추적을 통한 공공 쓰레기통 유료화 시스템 구축
@@ -385,6 +325,9 @@ content:
           **프로젝트 개요**
           - 웹 및 모바일 앱(React Native)에 대한 E2E 테스트 자동화 환경 구축
           - Selenium과 Appium을 활용하여 사용자 시나리오 기반 테스트 작성
+
+          **팀 구성 및 역할**<br>
+          - 단독으로 개선 방안 제안 후 사례 공유
 
           **주요 업무**
           - Selenium을 활용한 웹 E2E 테스트 환경 구축
@@ -399,7 +342,6 @@ content:
              - XPath 기반 요소 선택으로 크로스 플랫폼 안정성 확보
           - **테스트 안정성 향상**
              - 비동기 렌더링으로 인한 타이밍 이슈 해결 (명시적 대기 조건 추가)
-             - 테스트 실패 시 스크린샷 자동 캡처 기능 구현
              - 테스트 환경 격리를 위한 데이터 초기화 스크립트 작성
           - **팀 문화 정착 시도**
              - E2E 테스트 작성 가이드 문서화 및 팀 공유
@@ -408,6 +350,85 @@ content:
           **기여 성과**
           - 웹/모바일 E2E 테스트 인프라 구축
           - 인증 플로우 자동화 테스트로 회귀 버그 조기 발견 가능
+
+  - title: 교육 활동
+    layout: list
+    content:
+      - title: 우아한테크코스 리뷰어
+        sub_title: Kotlin 을 교육하며 코드리뷰
+        caption: 2024.02.13 - 2024.06.24
+        description: |
+          - Kotlin 을 바탕으로 객체지향과 테스트 주도 개발을 교육
+          - 코드리뷰 예시
+             - [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325)
+             - [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
+
+      - title: JPA 리뷰어
+        sub_title: 바닐라 자바로 Hibernate 구현
+        caption: 2023.10.14 - 2023.11.25
+        description: |
+          - JSR 338 문서를 기반으로 Hibernate 를 바닥부터 구현
+          - 구현한 개념들 : QueryBuilder, EntityManager, 1차 캐시, OneToMany 프록시
+          - 코드리뷰 예시 : [멀티 쓰레드 환경에서의 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
+
+      - title: Spring 리뷰어
+        sub_title: 바닐라 자바로 프레임워크 구현
+        caption: 2022.07.18 - 2022.09.29
+        description: |
+          - 바닐라 자바로 Spring 프레임워크를 바닥부터 구현
+          - 구현한 개념들 : WAS, MVC, JDBC, DI, AOP
+          - 코드리뷰 예시 : [쿠키 구현 시 NullObjectPattern 도입](https://github.com/next-step/java-http/pull/43#discussion_r1676799820)
+
+      - title: TDD 리뷰어
+        sub_title: 객체지향과 TDD 를 교육
+        caption: 2021.03 - 2021.05
+        description: |
+          - 객체지향 생활체조 원칙을 바탕으로, 단위테스트 작성을 교육
+          - 코드리뷰 예시 : [테스트와 책임분리](https://github.com/next-step/java-racingcar/pull/3214#issuecomment-1095750744)
+
+      - title: 한빛미디어 강사
+        sub_title: 공감세미나를 기획하고 개최
+        caption: 2019.03 - 2019.06
+        description: |
+          - 개발 문서화를 주제로 한빛미디어의 후원을 받은 세미나를 기획하고 개최
+          - 세미나에서 다룬 개념들 : 사전정의서, 요구사항 명세서, ERD, 프로세스 Flow Chart
+
+  - title: 스터디 활동
+    layout: list
+    content:
+      - title: ATDD in Legacy
+        sub_title: ATDD 사이클로 레거시 리팩토링하기
+        caption: 2025.09.01 - 2025.09.28
+        description: |
+          - 기획 문서가 없을 때, 레거시 코드만으로 요구사항 문서 도출
+          - RestAssured, Cucumber, WireMock 테스트 라이브러리 활용
+          - CI/CD 파이프라인에 ATDD를 통합하여 자동화된 배포 체계를 구축
+          - [교육 프로그램 링크](https://edu.nextstep.camp/c/yffm83ws)
+
+      - title: Spring Security
+        sub_title: Spring Security 바닥부터 구현
+        caption: 2025.02.02 - 2025.03.09
+        description: |
+          - 스프링 시큐리티 소스코드를 모방하여, 바닐라 자바로 구현
+          - 인증과 인가 기능을 프레임워크에서 확장성 있게 제공하도록 구현
+          - 구현한 개념들 : SecurityFilterChain, RoleHierarchy, OAuth2, CSRF
+          - [교육 프로그램 링크](https://edu.nextstep.camp/c/GUqVYNrn)
+
+      - title: 커널 function trace
+        sub_title: 오픈소스 컨트리뷰톤 장려상 수상
+        caption: 2022.06.08 - 2022.11.22
+        description: |
+          - 리눅스 커널의 함수 콜을 추적하는 uftrace 오픈소스 프로젝트에 참여
+          - 메일링 리스트를 통해 git patch 파일을 주고 받으며 협업
+          - 테스트 코드 실패 해결과 잘못된 출력 문구 수정에 기여
+
+      - title: 테스트주도 문서화
+        sub_title: REST Docs로 인수테스트를 문서화
+        caption: 2021.03.07 - 2022.04.18
+        description: |
+          - 기획 요구사항과 일치하는 어휘를 인수테스트의 어휘로 사용
+          - 작성한 테스트가 살아있는 문서가 될 수 있도록 REST Docs 활용
+          - [교육 프로그램 링크](https://edu.nextstep.camp/c/R89PYi5H)
 
 # Footer
 footer_show_references: false
