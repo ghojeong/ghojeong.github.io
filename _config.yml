@@ -38,7 +38,7 @@ content:
     layout: list
     content:
       - title: Bithumb
-        sub_title: 회원인증팀 백엔드 개발자
+        sub_title: AI서비스개발팀 백엔드 개발자
         caption: 2025.09.01 -
         description: |
           - KCB 휴대폰 인증을 활용한 SBS 가요대전 방청권 신청 시스템 개발 (<mark>1.7만 RPS</mark>)
