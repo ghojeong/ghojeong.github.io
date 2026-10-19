@@ -22,14 +22,15 @@ about_title: 소개
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
   맡은 제품에 강한 책임감을 가지고 파고드는 개발자 고정완입니다. <br>
-  4년간 드림포라의 테크리드로 서비스를 바닥부터 만들며 200만 사용자, MAU 16만을 달성했습니다. <br>
-  4년간 ATDD Cycle을 실천했습니다. 커버리지 보다는 <strong>요구사항을 정확히 검증하는 테스트</strong>를 추구합니다. <br>
+  빗썸 AI 서비스 <strong>테크리드로 23명의 팀원을 리딩</strong>하여 2026년 9월 빗썸 AI를 출시했습니다. <br>
+  드림포라의 테크리드로 서비스를 바닥부터 만들며 200만 사용자, MAU 16만을 달성했습니다. <br>
+  4년간 ATDD Cycle을 실천했습니다. 커버리지 보다는 요구사항을 정확히 검증하는 테스트를 추구합니다. <br>
 
   5년간 끊임없이 개발 스터디를 했으며, 동작원리를 깊게 파고드는 공부를 좋아합니다. <br>
-  스터디 활동을 인정받아 NEXTSTEP과 우아한테크코스에서 전문 리뷰어 활동을 했습니다. <br>
-  바닐라 언어만으로 <strong>프레임워크를 바닥부터 만드는</strong> 스터디에 자주 참여합니다.
+  스터디 활동을 인정받아 NEXTSTEP과 우아한테크코스에서 교육자 활동을 했습니다. <br>
+  바닐라 언어만으로 프레임워크를 바닥부터 만드는 스터디에 자주 참여합니다.
 
-  UNIST 에서 컴퓨터공학과 수리과학을 융합전공하여 성적우수 졸업했습니다. <br>
+  과학기술원에서 컴퓨터공학과 수리과학을 융합전공하여 성적우수 졸업했습니다. <br>
   문제를 풀기 전에, 문제 요구사항을 수학적으로 정의하는 훈련을 받았습니다.
 
 content:
@@ -38,11 +39,13 @@ content:
     layout: list
     content:
       - title: Bithumb
-        sub_title: AI서비스개발팀 백엔드 개발자
+        sub_title: AI 서비스 테크리드
         caption: 2025.09.01 -
         description: |
-          - KCB 휴대폰 인증을 활용한 SBS 가요대전 방청권 신청 시스템 개발 (<mark>1.7만 RPS</mark>)
-          - FIU 자료제출에 대비한 회원 데이터 정합성 검증 배치 개발
+          - 23명의 팀을 이끌어 [**빗썸 AI 서비스**](https://feed.bithumb.com/notice/1654673) 출시, <mark>주문전환율 15%</mark> 달성
+          - 미국 AI 협력사인 Surf 와 영어로 미팅하며 한국 리전 인프라 및 정보 보호 데이터 흐름 설계
+          - Braze CRM 도입을 대비한 메뉴 개인화 플랫폼 백엔드 설계 및 구현
+          - KCB 휴대폰 인증을 활용한 SBS 가요대전 방청권 신청 시스템 개발, (<mark>1.7만 TPS</mark>) 성능검수 통과
 
       - title: SumOne
         sub_title: 계약직 백엔드 개발자
@@ -55,9 +58,9 @@ content:
         sub_title: 백엔드 테크리드
         caption: 2021.08.25 - 2025.03.25
         description: |
-          - IDC에서 AWS 클라우드로 인프라 전환 후 <mark>장애빈도 99%</mark> 감소
+          - IDC에서 AWS 클라우드로 인프라 전환 후 장애빈도 99% 감소
           - 쿼리튜닝과 DB 파티셔닝 후 <mark>서버비용 82%</mark> 절약
-          - [**Dreamfora 경력기술서 링크**](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md)
+          - [Dreamfora 경력기술서 링크](https://github.com/ghojeong/resume/blob/main/dreamfora/README.md)
 
       - title: Ecube Labs
         sub_title: 웹 개발자
@@ -97,9 +100,43 @@ content:
   - title: Bithumb 프로젝트 상세
     layout: list
     content:
+      - title: 빗썸 AI
+        sub_title: 종목신호, 종목분석, 일일시황
+        caption: Java, Spring, Redis, Akamai CDN <br><br> <img src="images/bit/bit_ai.png" />
+        description: |
+          **프로젝트 개요**<br>
+          고객이 투자 정보에 쉽게 접근하도록 돕는 빗썸 AI 서비스 개발 및 출시
+
+          **팀 구성 및 역할**<br>
+          - 테크리드로 기술 설계와 검수 담당, 23명의 팀원과 협업
+          - 백엔드 핵심 대고객 로직을 직접 구현하고 업무 배분 및 결과 검수
+          - 미국 Surf AI 기술팀과 영어로 요구사항·일정·비용 조율
+
+          **문제 해결 과정**<br>
+          - L1 Caffeine과 L2 Redis 캐시를 분리하고 캐시 웜업으로 대고객 요청의 DB 조회 방지
+          - Redis Pub/Sub으로 이중화 WAS 간 캐시 변경을 동기화
+          - 한국 리전 인프라와 Private Link를 구성해 개인정보 보호 및 데이터 동기화 요건 대응
+          - Akamai CDN을 활용해 인프라 네트워크 비용 절감
+
+          **기여 성과**<br>
+          - 2026년 9월 1일 서비스 출시
+          - 1.2만 TPS 성능 검수 통과, 주문전환율 15% 달성
+
+      - title: 메뉴 개인화 플랫폼
+        sub_title: 고객분류에 따라 개인화된 메뉴 노출
+        caption: Java, Spring, Redis, Braze
+        description: |
+          **프로젝트 개요**<br>
+          거래량 등급, 거래 창구, 거래 빈도에 따라 다른 메뉴를 제공하는 개인화 플랫폼 개발
+
+          **기여 성과**<br>
+          - 외부 CRM 인 Braze 를 도입하기 전의 자체 플랫폼 개발
+          - Braze 도입에 대비한 Custom Attribute 동기화 파이프라인 구축
+          - 보안을 위해 실명 특정이 불가능한 외부 연동 전용 고객식별 id 체계 구축
+
       - title: SBS 가요대전 방청권 신청
         sub_title: 1.7만 RPS 처리 가능한 시스템 구축
-        caption: KCB, Java, Spring, Aurora, Redis <br><br> <img src="images/bit/rps.png" width="350px" /> <br> <img src="images/bit/response_time.png" width="350px" />
+        caption: KCB, Java, Spring, Aurora, Redis <br><br> <img src="images/bit/rps.png" /> <br> <img src="images/bit/response_time.png" />
         description: |
           **프로젝트 개요**<br>
           10분 동안 50만 신청이 예상되는 SBS 방청권 신청 시스템 개발
@@ -133,7 +170,7 @@ content:
     content:
       - title: 1900만명 회원 데이터
         sub_title: 서비스 무중단 마이그레이션
-        caption: PostgreSQL, DynamoDB, AWS DMS <br><br> <img src="images/sumone/migration.png" width="350px" />
+        caption: PostgreSQL, DynamoDB, AWS DMS <br><br> <img src="images/sumone/migration.png" />
         description: |
           **프로젝트 개요**<br>
           커플 다이어리 서비스의 전체 회원 데이터를 PostgreSQL에서 DynamoDB로 마이그레이션
@@ -193,7 +230,7 @@ content:
 
       - title: AWS 로 인프라 전환
         sub_title: 장애 빈도 99% 감소
-        caption: EC2, ECS, RDS, S3, ALB, VPC, CloudFront, Route53, IAM <br><br> <img src="images/dreamfora/dreamfora_crash.png" width="350px" />
+        caption: EC2, ECS, RDS, S3, ALB, VPC, CloudFront, Route53, IAM <br><br> <img src="images/dreamfora/dreamfora_crash.png" />
         description: |
           **프로젝트 개요**<br>
           IDC 호스팅에서 AWS 클라우드로 인프라 전환
@@ -226,7 +263,7 @@ content:
 
       - title: 스키마 재설계, 쿼리 튜닝
         sub_title: 서버 비용 82% 절감
-        caption: Java, Spring, JPA, MariaDB <br><br> <img src="images/dreamfora/megazone.png" width="350px" />
+        caption: Java, Spring, JPA, MariaDB <br><br> <img src="images/dreamfora/megazone.png" />
         description: |
           **프로젝트 개요**<br>
           재귀 쿼리와 N+1 문제를 해결하기 위한 DB 스키마 재설계 및 성능 최적화
@@ -292,7 +329,7 @@ content:
 
       - title: QR 기반 인증 및 과금
         sub_title: 이치카와시 공공 쓰레기통 유료화
-        caption: React, TypeScript, Redux, GraphQL <br><br> <img src="images/ecubelabs/i-Box.png" width="350px" />
+        caption: React, TypeScript, Redux, GraphQL <br><br> <img src="images/ecubelabs/i-Box.png" />
         description: |
           **프로젝트 개요**<br>
           일본 이치카와시에 설치된 스마트 공공 쓰레기통 시스템 개발. <br>
@@ -320,7 +357,7 @@ content:
 
       - title: E2E 테스트 환경 구축
         sub_title: 웹/모바일 E2E 테스트 환경 구축
-        caption: Selenium, Appium, TypeScript, Jest <br><br> <img src="images/ecubelabs/appium-login.gif" width="350px" /> <br><br> <img src="images/ecubelabs/selenium-login.gif" width="350px" />
+        caption: Selenium, Appium, TypeScript, Jest <br><br> <img src="images/ecubelabs/appium-login.gif" /> <br><br> <img src="images/ecubelabs/selenium-login.gif" />
         description: |
           **프로젝트 개요**
           - 웹 및 모바일 앱(React Native)에 대한 E2E 테스트 자동화 환경 구축
@@ -354,7 +391,7 @@ content:
   - title: 교육 활동
     layout: list
     content:
-      - title: 우아한테크코스 리뷰어
+      - title: 우아한테크코스 교육자
         sub_title: Kotlin 을 교육하며 코드리뷰
         caption: 2024.02.13 - 2024.06.24
         description: |
@@ -363,7 +400,7 @@ content:
              - [람다와 함수형 프로그래밍](https://github.com/woowacourse/kotlin-omok/pull/55#discussion_r1535278325)
              - [테스트와 예외처리](https://github.com/woowacourse/kotlin-lotto/pull/93#issuecomment-1970238649)
 
-      - title: JPA 리뷰어
+      - title: JPA 교육자
         sub_title: 바닐라 자바로 Hibernate 구현
         caption: 2023.10.14 - 2023.11.25
         description: |
@@ -371,7 +408,7 @@ content:
           - 구현한 개념들 : QueryBuilder, EntityManager, 1차 캐시, OneToMany 프록시
           - 코드리뷰 예시 : [멀티 쓰레드 환경에서의 영속성 컨텍스트](https://github.com/next-step/jpa-entity-manager/pull/39#discussion_r1372620312)
 
-      - title: Spring 리뷰어
+      - title: Spring 교육자
         sub_title: 바닐라 자바로 프레임워크 구현
         caption: 2022.07.18 - 2022.09.29
         description: |
@@ -379,7 +416,7 @@ content:
           - 구현한 개념들 : WAS, MVC, JDBC, DI, AOP
           - 코드리뷰 예시 : [쿠키 구현 시 NullObjectPattern 도입](https://github.com/next-step/java-http/pull/43#discussion_r1676799820)
 
-      - title: TDD 리뷰어
+      - title: TDD 교육자
         sub_title: 객체지향과 TDD 를 교육
         caption: 2021.03 - 2021.05
         description: |
